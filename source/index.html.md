@@ -318,7 +318,7 @@ And use the [AccessToken](https://developers.facebook.com/tools/accesstoken/) To
 - Status = 200 (Success).
 </aside>
 
-##facebook.getUserDetails 
+##facebook.postonWall
 **Drag and drop this block from the Facebook Package.**
 
 **Use Case:** Post on user's wall.
