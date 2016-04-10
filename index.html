@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>RapidAPI Documentation</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;]">
+  <body class="index" data-languages="[&quot;Web&quot;,&quot;iOS&quot;,&quot;Android&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,9 +101,9 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="Web">Web</a>
+              <a href="#" data-language-name="iOS">iOS</a>
+              <a href="#" data-language-name="Android">Android</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -112,7 +112,7 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://www.rapidapi.com/'>Sign Up</a></li>
             <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -121,161 +121,335 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to RapidAPI, the first platform allows you to build the backend for your app based on common APIs. Using a simple drag and drop edtior you will be able to create any logic to run your app and easily connect to any platform.</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p><strong>How it&rsquo;s all started?</strong></p>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<p>We were at a Hackathon&hellip; And we&rsquo;ve seen that all the teams were working on the same backend at the same time&hellip; So the first part of the Hackathon has gone to Installing servers, understanding APIs and creating logic. But, the interesting thing is that they all used the same APIs and same backends for their apps. We have created an amazing platform allows you to build a backend using drag and drop editor, with our platform you will be able to be to spend 10% of your time on backend development and to devote 90% of your time on Product, Design and Frontend development.</p>
 
-<h1 id="authentication">Authentication</h1>
+<p>Cheers!</p>
 
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>RapidAPI Team</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<h1 id="overview-page">Overview Page</h1>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<p>The overview page will show you the following information:</p>
 
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<ul>
+<li>Number of Backend Actions (Endpoints), Numbers (For sending SMS messages), And Databases you&rsquo;ve used in your project.</li>
+<li>Basic Tutorials.</li>
+<li>Collaborators - Here you can share your project with other teammates. </li>
+<li>Your Latest Activity.</li>
+<li>Basic Statistics.</li>
+</ul>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<h1 id="endpoints-page">Endpoints Page</h1>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>The endpoints page is the core of your app. Through this page you can create the backend actions for your app, create static pages based on HTML, CSS and JS and upload files. </p>
 
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
+<p><img src="http://i.giphy.com/l0LJdmkawpJ1lnzpK.gif" /></p>
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+<h2 id="web-pages">Web Pages</h2>
 
-<h1 id="kittens">Kittens</h1>
+<p>By clicking on Web Pages you will be able to create a static webpage that will be host on our servers. <strong>The URL of the web page will be structured this way:</strong></p>
 
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p><code class="prettyprint">http://[Your-Project-Name].imrapid.io/[The-Web-Page Name]</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>For example:
+<code class="prettyprint">http://expert-bluewhale-loli.imrapid.io/index</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h2 id="files">Files</h2>
 
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
+<p>Using this tool you can upload any file you want to our servers and <code class="prettyprint">GET</code> it later. </p>
 
-<p>This endpoint retrieves all kittens.</p>
+<h2 id="backend-actions">Backend Actions</h2>
 
-<h3 id="http-request">HTTP Request</h3>
+<p>By clicking on &lsquo;Backend Actions&rsquo; you will be able to create a backend action, for example: Sign_up backend action (Endpoint). </p>
 
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
+<p>Give it a name that will describe it the best and go edit it. To create your endpoint use the &#39;Edit&rsquo; button right after you&rsquo;re creating it, this will take you forward to the Endpoints (Backend Actions) Editor page =&gt;</p>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h1 id="endpoints-editor">Endpoints Editor</h1>
+
+<p><img src="http://i.giphy.com/3oCWtzVbAwEzBnmF68.gif" /></p>
+
+<p>The editor is the core of our platform, using this tool you will be able to create any logic tree based any API we support. </p>
+
+<p>The editor is divided into the tools you need to create the endpoints:</p>
+
+<h2 id="blocks">Blocks</h2>
+
+<p>APIs divided into backend actions -&gt; Blocks = Drag and Drop them to open them.</p>
+
+<h2 id="code-snippet">Code Snippet</h2>
+
+<p>An <code class="prettyprint">HTTP Access</code> code generator for iOS, Android and WEB.</p>
+
+<h2 id="run-tool">RUN Tool</h2>
+
+<p>The RUN tool, a.k.a the Action Panel is your tool to check the endpoint. It means that you will be able to find out </p>
+
+<p>Sometimes, it&rsquo;s good to check your endpoint with <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en"><strong>Postman</strong></a> also.</p>
+
+<h2 id="body-parameters">Body Parameters</h2>
+
+<p>To use the #body parameters you should fill the </p>
+
+<h1 id="calculate-backend-fucntions">Calculate Backend Fucntions</h1>
+
+<p><img src="http://i.giphy.com/26haHhYc5OPa8XKpi.gif" /></p>
+
+<h2 id="calculate-add">Calculate.add</h2>
+
+<p><strong>Use Case:</strong> You are using leaderboard in your game and you want to add the number of user’s points after the game has ended.</p>
+
+<p><strong>Parameters information:</strong> </p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Use</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>Num1</td>
+<td>Number of #body parameter</td>
+<td>Will be the first number to be part of the function</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>Num2</td>
+<td>Number of #body parameter</td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
 </tr>
 </tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get the addition result. Something like 3+1=4? </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#">(How to?)</a></p>
+
+<aside class="warning">Error - Use the response.SendMessage block to get an error message back.</aside>
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Success — Use the response.SendMessage block to get a success message back. In the message field, use the #[Name of the object] to get it.
 </aside>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id="calculate-substract">Calculate.substract</h2>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p><strong>Use Case:</strong> Substract two numbers and get a resault.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
-
-<h3 id="url-parameters">URL Parameters</h3>
+<p><strong>Parameters information:</strong> </p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Use</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>Num1</td>
+<td>Number of #body parameter</td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter</td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>difference</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
 </tr>
 </tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get the substraction result. Something like 3-1=2? </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-multiply">Calculate.multiply</h2>
+
+<p><strong>Use Case:</strong> Multiply two numbers and get a resault.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Num1</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get the substraction result. Something like 3-1=2? </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-random">Calculate.random</h2>
+
+<p><strong>Use Case:</strong> Print a random number between min and max limit.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Max</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the minimum number presented</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the maximum number presented</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get a random number between the minimum and the maximum number.</p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-divide">Calculate.divide</h2>
+
+<p><strong>Use Case:</strong> Divide two numbers and get a resault.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Num1</td>
+<td>Number of #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> A result of two divided numbers. 3/3 = 1. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h1 id="database">Database</h1>
+
+<p><img src="http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif" /></p>
+
+<h1 id="send-sms">Send SMS</h1>
+
+<h1 id="send-email">Send Email</h1>
+
+<h2 id="delivery-sendplainemail">delivery.sendPlainEmail</h2>
+
+<p><strong>Use Case:</strong> Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>From</td>
+<td>Use an email address or use #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>This will be shown as the sender email address</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td>Plain text or use #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>Use a sentence that describes the email. For example: Welcome to RapidAPI.</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Plain Text</td>
+<td>Use the text that will be sended in the email body.</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Use an email address or use #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Who&rsquo;s going to get this email?</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Success or Error. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
 
           <h1 id="errors">Errors</h1>
 
@@ -338,9 +512,9 @@ Remember — a happy kitten is an authenticated kitten!
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="Web">Web</a>
+                <a href="#" data-language-name="iOS">iOS</a>
+                <a href="#" data-language-name="Android">Android</a>
           </div>
       </div>
     </div>
