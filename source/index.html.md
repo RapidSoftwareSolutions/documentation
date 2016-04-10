@@ -2,12 +2,12 @@
 title: RapidAPI Documentation 
 
 language_tabs:
-  - shell
-  - ruby
-  - python
+  - Web
+  - iOS
+  - Android
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://www.rapidapi.com/'>Sign Up</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -18,151 +18,214 @@ search: true
 
 # Introduction
 
-Welcome to RapidAPI
+Welcome to RapidAPI, the first platform allows you to build the backend for your app based on common APIs. Using a simple drag and drop edtior you will be able to create any logic to run your app and easily connect to any platform.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+**How it's all started?**
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+We were at a Hackathon... And we've seen that all the teams were working on the same backend at the same time... So the first part of the Hackathon has gone to Installing servers, understanding APIs and creating logic. But, the interesting thing is that they all used the same APIs and same backends for their apps. We have created an amazing platform allows you to build a backend using drag and drop editor, with our platform you will be able to be to spend 10% of your time on backend development and to devote 90% of your time on Product, Design and Frontend development.
 
-# Authentication
+Cheers!
 
-> To authorize, use this code:
+RapidAPI Team
 
-```ruby
-require 'kittn'
+# Overview Page 
+The overview page will show you the following information:
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+- Number of Backend Actions (Endpoints), Numbers (For sending SMS messages), And Databases you've used in your project.
+- Basic Tutorials.
+- Collaborators - Here you can share your project with other teammates. 
+- Your Latest Activity.
+- Basic Statistics.
 
-```python
-import kittn
+# Endpoints Page
+The endpoints page is the core of your app. Through this page you can create the backend actions for your app, create static pages based on HTML, CSS and JS and upload files. 
 
-api = kittn.authorize('meowmeowmeow')
-```
+![](http://i.giphy.com/l0LJdmkawpJ1lnzpK.gif)
 
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
+##Web Pages
 
-> Make sure to replace `meowmeowmeow` with your API key.
+By clicking on Web Pages you will be able to create a static webpage that will be host on our servers. **The URL of the web page will be structured this way:**
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+`http://[Your-Project-Name].imrapid.io/[The-Web-Page Name]`
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+For example:
+`http://expert-bluewhale-loli.imrapid.io/index`
 
-`Authorization: meowmeowmeow`
+##Files
+Using this tool you can upload any file you want to our servers and `GET` it later. 
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+##Backend Actions
 
-# Kittens
+By clicking on 'Backend Actions' you will be able to create a backend action, for example: Sign_up backend action (Endpoint). 
 
-## Get All Kittens
+Give it a name that will describe it the best and go edit it. To create your endpoint use the 'Edit' button right after you're creating it, this will take you forward to the Endpoints (Backend Actions) Editor page =>
 
-```ruby
-require 'kittn'
+#Endpoints Editor
+![](http://i.giphy.com/3oCWtzVbAwEzBnmF68.gif)
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+The editor is the core of our platform, using this tool you will be able to create any logic tree based any API we support. 
 
-```python
-import kittn
+The editor is divided into the tools you need to create the endpoints:
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+##Blocks
+APIs divided into backend actions -> Blocks = Drag and Drop them to open them.
 
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
+##Code Snippet 
+An `HTTP Access` code generator for iOS, Android and WEB.
 
-> The above command returns JSON structured like this:
+##RUN Tool
+The RUN tool, a.k.a the Action Panel is your tool to check the endpoint. It means that you will be able to find out 
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
+Sometimes, it's good to check your endpoint with [**Postman**](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) also.
 
-This endpoint retrieves all kittens.
+##Body Parameters
 
-### HTTP Request
+To use the #body parameters you should fill the 
 
-`GET http://example.com/api/kittens`
 
-### Query Parameters
 
-Parameter | Default | Description
+
+
+#Calculate Backend Fucntions
+![](http://i.giphy.com/26haHhYc5OPa8XKpi.gif)
+
+##Calculate.add
+
+**Use Case:** You are using leaderboard in your game and you want to add the number of user’s points after the game has ended.
+
+**Parameters information:** 
+
+Parameter | Use | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+Num1 | Number of #body parameter | Will be the first number to be part of the function | 
+Num2 | Number of #body parameter | Will be the second number to be part of the function
+Sum | Object | Give your object a name, so you can print it later with the result.
+
+**Returns Examples:** You will get the addition result. Something like 3+1=4? 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#)
+
+<aside class="warning">Error - Use the response.SendMessage block to get an error message back.</aside>
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Success — Use the response.SendMessage block to get a success message back. In the message field, use the #[Name of the object] to get it.
 </aside>
 
-## Get a Specific Kitten
+##Calculate.substract
 
-```ruby
-require 'kittn'
+**Use Case:** Substract two numbers and get a resault.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
+**Parameters information:** 
 
-```python
-import kittn
+Parameter | Use | Description
+--------- | ------- | -----------
+Num1 | Number of #body parameter | Will be the first number to be part of the function | 
+Num2 | Number of #body parameter | Will be the second number to be part of the function
+difference | Object | Give your object a name, so you can print it later with the result.
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+**Returns Examples:** You will get the substraction result. Something like 3-1=2? 
 
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
+**How to test?** Use the 'RUN' tool [(How to?)](#)
 
-> The above command returns JSON structured like this:
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
 
-This endpoint retrieves a specific kitten.
+##Calculate.multiply
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+**Use Case:** Multiply two numbers and get a resault.
 
-### HTTP Request
+**Parameters information:** 
 
-`GET http://example.com/kittens/<ID>`
+Parameter | Use | Description
+--------- | ------- | -----------
+Num1 | Number of #body parameter [(How to?)](##body-parameters) | Will be the first number to be part of the function | 
+Num2 | Number of #body parameter [(How to?)](##body-parameters) | Will be the second number to be part of the function
+Product | Object | Give your object a name, so you can print it later with the result.
 
-### URL Parameters
+**Returns Examples:** You will get the substraction result. Something like 3-1=2? 
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+##Calculate.random
+
+**Use Case:** Print a random number between min and max limit.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Max | Number of #body parameter [(How to?)](##body-parameters) | Will be the minimum number presented | 
+Min | Number of #body parameter [(How to?)](##body-parameters) | Will be the maximum number presented
+to | Object | Give your object a name, so you can print it later with the result.
+
+**Returns Examples:** You will get a random number between the minimum and the maximum number.
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+##Calculate.divide
+
+**Use Case:** Divide two numbers and get a resault.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Num1 | Number of #body parameter [(How to?)](#body-parameters) | Will be the first number to be part of the function | 
+Num2 | Number of #body parameter [(How to?)](#body-parameters) | Will be the second number to be part of the function
+to | Object | Give your object a name, so you can print it later with the result.
+
+**Returns Examples:** A result of two divided numbers. 3/3 = 1. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+#Database
+![](http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif)
+
+#Send SMS
+
+#Send Email
+##delivery.sendPlainEmail
+
+**Use Case:** Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him. 
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+From | Use an email address or use #body parameter [(How to?)](#body-parameters) | This will be shown as the sender email address  | 
+Subject | Plain text or use #body parameter [(How to?)](#body-parameters) | Use a sentence that describes the email. For example: Welcome to RapidAPI. 
+Text | Plain Text | Use the text that will be sended in the email body.
+To | Use an email address or use #body parameter [(How to?)](##body-parameters) | Who's going to get this email?
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
 
