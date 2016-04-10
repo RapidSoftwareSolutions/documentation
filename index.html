@@ -194,7 +194,7 @@
 
 <p>To use the #body parameters you should fill the </p>
 
-<h1 id="calculate-backend-fucntions">Calculate Backend Fucntions</h1>
+<h1 id="calculate">Calculate</h1>
 
 <p><img src="http://i.giphy.com/26haHhYc5OPa8XKpi.gif" /></p>
 
@@ -404,9 +404,48 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <h1 id="send-sms">Send SMS</h1>
 
+<h2 id="delivery-sendsms">delivery.sendSMS</h2>
+
+<p><strong>Drag and drop this block from the delivery package.</strong></p>
+
+<p><strong>Use Case:</strong> Send an SMS to a new registered user. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>Plain Text or use #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>This text will be sent as a text message</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Phone Number + Area Code or use #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>Use a sentence that describes the email. For example: Welcome to RapidAPI.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Success or Error. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
 <h1 id="send-email">Send Email</h1>
 
 <h2 id="delivery-sendplainemail">delivery.sendPlainEmail</h2>
+
+<p><strong>Drag and drop this block from the delivery package.</strong></p>
 
 <p><strong>Use Case:</strong> Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him. </p>
 
@@ -448,7 +487,153 @@ Success — Use the **response.SendMessage** block to get a success message back
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+<h1 id="facebook">Facebook</h1>
+
+<h2 id="facebook-login">Facebook.Login</h2>
+
+<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
+
+<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method.</strong></p>
+
+<p><strong>Use Case:</strong> Add a facebook login plugin to your app.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Client ID</td>
+<td>Your App ID on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
+<td>What is your app ID?</td>
+</tr>
+<tr>
+<td>Client Secret</td>
+<td>Your App Secret on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
+<td>What is your app ID?</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Login url. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = #[object name].
+- Status = 200 (Success).
+</aside>
+
+<h2 id="facebook-getuserdetails">facebook.getUserDetails</h2>
+
+<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
+
+<p><strong>Use Case:</strong> Get details of a user that has signed up using your facebook app.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userToken</td>
+<td><a href="https://developers.facebook.com/tools/accesstoken/">Facebook Access Token Tool </a></td>
+<td>What&rsquo;s the user&rsquo;s token?</td>
+</tr>
+<tr>
+<td>App Secret</td>
+<td>Your App Secret on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
+<td>What is your app ID?</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Login url. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a> </p>
+
+<p>And use the <a href="https://developers.facebook.com/tools/accesstoken/">AccessToken</a> Tool on Facebook.</p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = #[object name].
+- Status = 200 (Success).
+</aside>
+
+<h2 id="facebook-getuserdetails">facebook.getUserDetails</h2>
+
+<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
+
+<p><strong>Use Case:</strong> Post on user&rsquo;s wall.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>Plain Text or #Body Parameter <a href="##body-parameters">(How to?)</a></td>
+<td>What is the message that will be published on user&rsquo;s wall</td>
+</tr>
+<tr>
+<td>userToken</td>
+<td><a href="https://developers.facebook.com/tools/accesstoken/">Facebook Access Token Tool </a></td>
+<td>What&rsquo;s the user&rsquo;s token?</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Login url. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a> </p>
+
+<p>And use the <a href="https://developers.facebook.com/tools/accesstoken/">AccessToken</a> Tool on Facebook.</p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = #[object name].
+- Status = 200 (Success).
 </aside>
 
           <h1 id="errors">Errors</h1>
