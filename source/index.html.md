@@ -86,7 +86,7 @@ To use the #body parameters you should fill the
 
 
 
-#Calculate Backend Fucntions
+#Calculate
 ![](http://i.giphy.com/26haHhYc5OPa8XKpi.gif)
 
 ##Calculate.add
@@ -203,9 +203,36 @@ Success — Use the **response.SendMessage** block to get a success message back
 ![](http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif)
 
 #Send SMS
+##delivery.sendSMS
+
+**Drag and drop this block from the delivery package.**
+
+**Use Case:** Send an SMS to a new registered user. 
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Message | Plain Text or use #body parameter [(How to?)](#body-parameters) | This text will be sent as a text message  | 
+To | Phone Number + Area Code or use #body parameter [(How to?)](#body-parameters) | Use a sentence that describes the email. For example: Welcome to RapidAPI. 
+
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
 
 #Send Email
 ##delivery.sendPlainEmail
+
+**Drag and drop this block from the delivery package.**
+
 
 **Use Case:** Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him. 
 
@@ -225,7 +252,96 @@ To | Use an email address or use #body parameter [(How to?)](##body-parameters) 
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+#Facebook
+##Facebook.Login 
+**Drag and drop this block from the Facebook Package.**
+
+**The Endpoint Must Be in a `GET` method.**
+
+**Use Case:** Add a facebook login plugin to your app.
+
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Client ID | Your App ID on [Facebook Developers](https://developers.facebook.com/) | What is your app ID?   | 
+Client Secret | Your App Secret on [Facebook Developers](https://developers.facebook.com/) | What is your app ID? 
+To | Object | Give your object a name, so you can print it later with the result.
+
+**Returns Examples:** Login url. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = #[object name].
+- Status = 200 (Success).
 </aside>
 
 
+##facebook.getUserDetails 
+**Drag and drop this block from the Facebook Package.**
+
+**Use Case:** Get details of a user that has signed up using your facebook app.
+
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+userToken | [Facebook Access Token Tool ](https://developers.facebook.com/tools/accesstoken/) | What's the user's token? | 
+App Secret | Your App Secret on [Facebook Developers](https://developers.facebook.com/) | What is your app ID? 
+To | Object | Give your object a name, so you can print it later with the result.
+
+**Returns Examples:** Login url. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool) 
+
+And use the [AccessToken](https://developers.facebook.com/tools/accesstoken/) Tool on Facebook.
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = #[object name].
+- Status = 200 (Success).
+</aside>
+
+##facebook.getUserDetails 
+**Drag and drop this block from the Facebook Package.**
+
+**Use Case:** Post on user's wall.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Message | Plain Text or #Body Parameter [(How to?)](##body-parameters) | What is the message that will be published on user's wall| 
+userToken | [Facebook Access Token Tool ](https://developers.facebook.com/tools/accesstoken/) | What's the user's token? |
+To | Object | Give your object a name, so you can print it later with the result.
+
+**Returns Examples:** Login url. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool) 
+
+And use the [AccessToken](https://developers.facebook.com/tools/accesstoken/) Tool on Facebook.
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = #[object name].
+- Status = 200 (Success).
+</aside>
