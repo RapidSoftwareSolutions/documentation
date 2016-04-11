@@ -20,6 +20,10 @@ search: true
 
 Welcome to RapidAPI, the first platform allows you to build the backend for your app based on common APIs. Using a simple drag and drop edtior you will be able to create any logic to run your app and easily connect to any platform.
 
+![](https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/12931066_10209313487584400_8906391932503995637_n.jpg?oh=514fe8636ab0c86e503dd8bbff92b599&oe=57BB2781)
+
+**We Are Here To Change The Way You Build Backend!**
+
 **How it's all started?**
 
 We were at a Hackathon... And we've seen that all the teams were working on the same backend at the same time... So the first part of the Hackathon has gone to Installing servers, understanding APIs and creating logic. But, the interesting thing is that they all used the same APIs and same backends for their apps. We have created an amazing platform allows you to build a backend using drag and drop editor, with our platform you will be able to be to spend 10% of your time on backend development and to devote 90% of your time on Product, Design and Frontend development.
@@ -200,7 +204,55 @@ Success — Use the **response.SendMessage** block to get a success message back
 </aside>
 
 #Database
+The database is soo sooooo important!; Right now the database section is placed right after the Endpoints page in the platform. Go there to understand how does it works. 
 ![](http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif)
+
+##Database Find.one
+**Name of the backend functions:** Find One object in your database.
+
+**Use Case:** Let’s say you want to get an object from your database. For example: Get user’s email.
+
+**Parameters information:**
+
+
+Parameter | Use | Example
+--------- | ------- | -----------
+Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
+Query Field | Where do you want to find the data? | you want to get an email - Use the string = email. 
+Query Operator | What will be the search type (action) that will go over your database. | ... 
+Query Value | What are you looking for? | the exact email: mickey@rapidapi.com
+To | Object This will show the result, give it a name and use with '#' to get the result as a response later on.| result
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it. In this case, it will be: #result
+</aside>
+
+**Missing:** Use the **response.SendMessage** block to get a missing message back. For example: The object is missing.
+
+##Database.find
+**Name of the backend functions:** Find more than one object in your database.
+
+**Use Case:** Let’s say I want to get all the data in a specific collection.
+
+**Parameters information:**
+
+
+Parameter | Use | Example
+--------- | ------- | -----------
+Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
+Query Field | Where do you want to find the data? | you want to get an email - Use the string = email. 
+Query Operator | What will be the search type (action) that will go over your database. | ... 
+Query Value | What are you looking for? | the exact email: mickey@rapidapi.com
+To | Object This will show the result, give it a name and use with '#' to get the result as a response later on.| result
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it. In this case, it will be: #result
+</aside>
+
+**Missing:** Use the **response.SendMessage** block to get a missing message back. For example: The object is missing.
+
 
 #Send SMS
 ##delivery.sendSMS
