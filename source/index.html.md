@@ -77,15 +77,19 @@ APIs divided into backend actions -> Blocks = Drag and Drop them to open them.
 ##Code Snippet 
 An `HTTP Access` code generator for iOS, Android and WEB.
 
+[](http://i.giphy.com/26AHKlEHmtZUjxEac.gif)
+
 ##RUN Tool
 The RUN tool, a.k.a the Action Panel is your tool to check the endpoint. It means that you will be able to find out 
 
+![](http://i.giphy.com/l3V0zAX4c3r1rf9mM.gif)
+
 Sometimes, it's good to check your endpoint with [**Postman**](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) also.
 
+
+
 ##Body Parameters
-
 To use the #body parameters you should fill the 
-
 
 
 
@@ -208,6 +212,7 @@ The database is soo sooooo important!; Right now the database section is placed 
 ![](http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif)
 
 ##Database Find.one
+
 **Name of the backend functions:** Find One object in your database.
 
 **Use Case:** Let’s say you want to get an object from your database. For example: Get user’s email.
@@ -218,9 +223,9 @@ The database is soo sooooo important!; Right now the database section is placed 
 Parameter | Use | Example
 --------- | ------- | -----------
 Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
-Query Field | Where do you want to find the data? | you want to get an email - Use the string = email. 
-Query Operator | What will be the search type (action) that will go over your database. | ... 
-Query Value | What are you looking for? | the exact email: mickey@rapidapi.com
+queryField | Where do you want to find the data? | you want to get an email - Use the string = email. 
+queryOperator | What will be the search type (action) that will go over your database. | ... 
+queryValue | What are you looking for? | the exact email: mickey@rapidapi.com
 To | Object This will show the result, give it a name and use with '#' to get the result as a response later on.| result
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
@@ -230,10 +235,11 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 **Missing:** Use the **response.SendMessage** block to get a missing message back. For example: The object is missing.
 
-##Database.find
+##database.find
+
 **Name of the backend functions:** Find more than one object in your database.
 
-**Use Case:** Let’s say I want to get all the data in a specific collection.
+**Use Case:** Let’s say you want to get all the data in a specific collection.
 
 **Parameters information:**
 
@@ -241,10 +247,13 @@ Success — Use the **response.SendMessage** block to get a success message back
 Parameter | Use | Example
 --------- | ------- | -----------
 Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
-Query Field | Where do you want to find the data? | you want to get an email - Use the string = email. 
-Query Operator | What will be the search type (action) that will go over your database. | ... 
-Query Value | What are you looking for? | the exact email: mickey@rapidapi.com
+limit | The maximum number of objects you want to get in one query request.  | Use a number. 12  |
+queryField | Where do you want to find the data? | you want to get an email - Use the string = email. 
+queryOperator | What will be the search type (action) that will go over your database. | ... 
+queryValue | What are you looking for? | the exact email: mickey@rapidapi.com
+skip | From which entity (number) you want to start the query. | Use a number. 5
 To | Object This will show the result, give it a name and use with '#' to get the result as a response later on.| result
+
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
@@ -253,8 +262,85 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 **Missing:** Use the **response.SendMessage** block to get a missing message back. For example: The object is missing.
 
+##database.update
 
-#Send SMS
+**Name of the backend functions:** Update an object in a database collection.
+
+**Use Case:** A user updating his email through the profile page in your social network.
+
+**Logic:** The **query** section will work as find and the **update** section will work for replace.
+
+
+**Parameters information:**
+
+
+Parameter | Use | Example
+--------- | ------- | -----------
+Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
+queryField | Where do you want to update the data? | You want to update an email - Use the string = email. 
+queryOperator | What will be the search type (action) that will go over your database. | ... 
+queryValue | What are you looking for? What value you want to update. | ...
+
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+
+##database.save
+
+
+**Name of the backend functions:** Save an object in a collection.
+
+**Use Case:** You want to save a new customer type that has registered to your online store. 
+
+**Parameters information:**
+
+
+1. Click 'Add', to add a key. 
+2. Name your key and choose the object type you want to use.
+
+
+Key | Value example 
+--------- | ------- 
+**Array** | Array is a collection of values. Use this to save a collection of users IDs. 
+**Object** | Object is a custom data schema that can contain arrays and strings and more objects. 
+**String** | String is traditionally a sequence of characters. Use it to define key and value for something you want to save in the database. 
+
+
+Here's an example of a username save to a collection:
+![](http://i.giphy.com/26AHHaJSSkHblFX6U.gif)
+
+
+Error - Use the **response.SendMessage** block to get an error message back.
+
+Success — Use the response.SendMessage block to get a success message back.
+
+
+
+##database.remove
+
+**Name of the backend functions:** Remove an object from a collection. 
+
+**Use Case:** You want to remove a customer type from your collection. 
+
+
+**Parameters information:**
+
+
+Parameter | Use | Example
+--------- | ------- | -----------
+Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
+queryField | Where do you want to update the data? | You want to update an email - Use the string = email. 
+queryOperator | What will be the search type (action) that will go over your database. | ... 
+queryValue | What are you looking for? What value you want to update. | ...
+
+Error - Use the **response.SendMessage** block to get an error message back.
+
+Success — Use the **response.SendMessage** block to get a success message back.
+
+
+
+
+#Delivery
 ##delivery.sendSMS
 
 **Drag and drop this block from the delivery package.**
@@ -273,18 +359,13 @@ To | Phone Number + Area Code or use #body parameter [(How to?)](#body-parameter
 
 **How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
 
-<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+Error - Use the **response.SendMessage** block to get an error message back.
 
-<aside class="success">
+
 Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
-</aside>
 
 
-#Send Email
 ##delivery.sendPlainEmail
-
-**Drag and drop this block from the delivery package.**
-
 
 **Use Case:** Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him. 
 
@@ -301,14 +382,118 @@ To | Use an email address or use #body parameter [(How to?)](##body-parameters) 
 
 **How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
 
-<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+**Error:** Use the **response.SendMessage** block to get an error message back.
 
-<aside class="success">
-
+**Success:**
 - Use response.sendMessage block, 
 - Message = Success
 - Status = 200 (Success).
-</aside>
+
+
+#Files
+
+##files.save
+**Allows you to upload file to the server**
+
+**Use Case:** User want to add a profile picture. 
+
+**How to use:** Add an upload function in your code to connect our endpoint to it.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+File | Use #body.[a name you want to use] for the file input in your app. | ... | 
+Folder | The folder that will contain all the files.   | img 
+Key | the name of the file you want to upload.  | ...
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+**Error:** Use the **response.SendMessage** block to get an error message back.
+
+**Success:**
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+
+##files.saveWithRandomKey
+**Save file on the server and giving it a different name**
+
+**Use Case:** You want to add gallery to your website. 
+
+**How to use:** Add an upload function in your code to connect our endpoint to it.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+File | Use #body.[a name you want to use] for the file input in your app. | ... | 
+Folder | The folder that will contain all the files.   | img 
+to | Object  | Give it a name (for example: result) so you can show the #result later.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+**Error:** Use the **response.SendMessage** block to get an error message back.
+
+**Success:**
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+
+##files.getDownloadURL
+**Save file on the server and giving it a different name**
+
+**Use Case:** Get a url of an uploaded file. 
+
+**How to use:** Can be used with an uploader to get the link to the file you’ve uploaded
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Folder | from which folder do you want to get the file URL? | ... | 
+Key | What’s the name of the file? | img 
+to | Object  | Give it a name (for example: result) so you can show the #result later.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+**Error:** Use the **response.SendMessage** block to get an error message back.
+
+**Success:**
+- Use response.sendMessage block, 
+- Message = use object.
+- Status = 200 (Success).
+
+##files.read
+**Save file on the server and giving it a different name**
+
+**Use Case:** Let’s say you want to print an image on the screen. 
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+Folder | from which folder do you want to read the file | ... | 
+Key | What’s the name of the file? | img 
+to | Object  | Give it a name (for example: result) so you can show the #result later.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+**Error:** Use the **response.SendMessage** block to get an error message back.
+
+**Success:**
+- Use response.sendMessage block, 
+- Message = use object
+- Status = 200 (Success).
+
 
 #Facebook
 ##Facebook.Login 
