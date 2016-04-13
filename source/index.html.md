@@ -1,6 +1,5 @@
 ---
 title: RapidAPI Documentation 
-
 language_tabs:
   - Web
   - iOS
@@ -310,7 +309,8 @@ Success — Use the **response.SendMessage** block to get a success message back
 </aside>
 
 #Database
-The database is soo sooooo important!; Right now the database section is placed right after the Endpoints page in the platform. Go there to understand how does it works. 
+Here you will get an explanation about the backend functions connected to 
+
 ![](http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif)
 
 ##Database Find.one
