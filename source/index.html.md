@@ -18,21 +18,127 @@ search: true
 
 # Introduction
 
-Welcome to RapidAPI, the first platform allows you to build the backend for your app based on common APIs. Using a simple drag and drop edtior you will be able to create any logic to run your app and easily connect to any platform.
+Welcome to RapidAPI. RapidAPI let's you build the backend for your app easily - without writing a single line of code. With RapidAPI you can use blocks to construct your backend logic. From saving to a database to proccesing payments - blocks can do anything!
 
 ![](https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/12931066_10209313487584400_8906391932503995637_n.jpg?oh=514fe8636ab0c86e503dd8bbff92b599&oe=57BB2781)
 
-**We Are Here To Change The Way You Build Backend!**
 
-**How it's all started?**
+##How it's all started?
 
-We were at a Hackathon... And we've seen that all the teams were working on the same backend at the same time... So the first part of the Hackathon has gone to Installing servers, understanding APIs and creating logic. But, the interesting thing is that they all used the same APIs and same backends for their apps. We have created an amazing platform allows you to build a backend using drag and drop editor, with our platform you will be able to be to spend 10% of your time on backend development and to devote 90% of your time on Product, Design and Frontend development.
+We were at a hackathon when we realized all the teams were spending hours building the same backend logic: installing DBs, writing user signup logic, updating packages and more. All these teams were spending hours and hours - basically doing the same thing. That's what we've built RapidAPI for. With RapidAPI, you get all the basic backend functions deliverd to you as blocks. All you have to do is drag and drop them and you get a fully functional backend - hosted in the cloud. **Rather than spending days on backend development - do it in minutes**.
 
-Cheers!
+##The Backend
+RapidAPI is an online platform that lets you create a back end for your web or mobile app without writing a single line of code. Every web or mobile app has two parts:
 
-RapidAPI Team
+- Front end: Runs on the user's device. In charge of showing the user interface (UI) and reacting to the users actions. For example: showing a button and then reacting to a click on it.
+- Back end: Runs on servers. In charge of storing data (e.g. user details, product lists, etc...) and performing actions (authenticating users, sending push notifications, etc...).
 
-# Overview Page 
+When using RapidAPI, you construct the back end logic using blocks. Each block represents a basic action done in the back end. These are things like saving to a database, sending a notification or accessing an API. The back end is hosted on the RapidAPI servers and you can use it from your app.
+
+##How it works
+
+Your backend is built out of backend actions. Each action performs a certain task for your app. Examples of actions can be:
+
+- **Sign up**: register a user to your app.
+- **Sign in**: verify a user in your app.
+- **Send message**: send a message from one user to another in your app.
+- **Purchase product**: pay for a product and mark it as purchased in your app.
+
+Each one of these backend actions is built out of blocks. Each block performs a basic task within an action. Let's take a sign up action for example. We'll first want to make sure that the user sends a valid email address. For that, we'll use the _verify.email_ block. This block will get the email passed in the request to that action and check if it's valid. It'll have 2 outcomes - these are things that can happen - either the email is valid, or it's not. If it's not - we'll return an error message. If it is, we'll check the password using a similar _verify.passwordLength_ block. If that's valid, we'll save to the database - and so on... That way, we'll build the logic of the action. It'll end up looking like that:
+
+![](http://curious-warthog-bhhb.imrapid.io/basic_block_flow.jpg)
+
+#Getting started
+Let's create the basic sign up backend action the get the ropes of using the system.
+
+To begin, head over to [https://rapidapi.com](https://rapidapi.com) and sign up.
+
+##Creating your first project
+
+A project in RapidAPI is basically the backend of a single app. It contains all the backend actions for that app, as well as it's database. Let's start by creating a new project.
+
+![](http://i.giphy.com/3o6ozxLj7NXDnZzK4U.gif)
+
+##Creating a database collection
+
+Now that we have a project, create a database collection that will store all the users that sign up. Do so by heading over to the database tab and clicking _Create New Collection_. Name the collection _users_ and create it.
+
+You'll now notice you have a fully functional database collection. In our next step, we'll build a backend action that saves to it.
+
+![](http://i.giphy.com/l3V0pRF2XJ6nl0Hok.gif)
+
+##Creating the Sign Up backend action
+
+To create the sign up backend action head over to the _ENDPOINTS_ tab. Click the _Backend Action_ button and create the new backend action named _sign up_. Once it is created, open it by clicking _Edit_.
+
+![](http://i.giphy.com/3o6ozunG5Pw2Z7iwMw.gif)
+
+Within the editor, we'll first drag in the _verify.email_ block to verify that the email supplied by the user is correct. As the parameter to be checked, we'll use `#body.email`. This will be replaced with the value sent under 'email' in the call to that backend action.
+
+![](http://i.giphy.com/xT1XGJHxpYuuZ71iuI.gif)
+
+<aside class="notice">
+Your application can pass parameters to the backend action in the request body. Parameters are passed as key-value pairs. For example, you can pass a username in the request body under the key `username`. To access it, use `#body.username` just like we did with the email just before.
+</aside>
+
+You'll notice that the verify block has 2 outcomes:
+
+- **is**: The passed value is a valid email.
+- **not**: The passed value is not a valid email.
+
+If it's not a valid email, we'll use the _response.sendMessage_ block to send back an error message saying `The email sent is not valid`, with a 400 code.
+
+<aside class="notice">
+Every backend action must end with a response. This response should let the app know what happened (success, error, etc...). Sometimes we'll send data in the response (for example, a feed of posts or a string of messages).
+Every response has a status code signifying the status of the request (you may be familiar with 404 which means not found). You can see a drop down with popular response codes.
+</aside>
+
+![](http://i.giphy.com/3o6ozjsuyiwOzLYrL2.gif)
+
+In case of success we will want to save the new user (e.g. email address) to the database (in real life we will probably get a password and name and want to verify them, but it's a very similar proccess).
+
+For that we will drag in the _database.save_ block which saves a new row into the database. We will set it to save to the `users` collection we've created earlier and define a row with one column - email. The value will be `#body.email` - the same value we verified in the previous step.
+
+![](http://i.giphy.com/d3FzTwod8PETNqNi.gif)
+
+You may notice the _database.save_ block has 2 possible outcomes: success and error. In both cases we'll use the _response.sendMessage_ block:
+
+- **success**: we'll send an `OK` message with a 201 status code (201 usually stands for "record created").
+- **error**: we'll send a `Server error` message with a 500 status code (500 usually means "server error").
+
+![](http://i.giphy.com/d3FyDFl05q5FUbQc.gif)
+
+You by now have a fully working sign up backend action. Next up we'll try it up and see how it can be connected to a mobile / web app.
+
+##Trying it out
+
+Now that you are the proud owner of a backend action, you will probably want to take it to a spin and see how it works, right? To do just that you can use the _run_ button on the top right corner of the editor. It'll open up the run panel. You should go to the body tab where we can set the body parameters. Create an `email` parameter and put a valid email in it. Press run and you'll see the success message.
+
+![](http://i.giphy.com/26AHHJYBW3sWQMCTm.gif)
+
+You can also go back to the database tab in the project page and see the new email saved to the _users_ collection. You can also try putting an invalid email and see that you are getting the appropriate error message.
+
+##Implementing it in your app
+
+Every backend action in RapidAPI is in-fact an HTTP endpoint. That means that you can make requests to it from any platfrom (including iOS, Android and Web Pages) using standard HTTP Request frameworks.
+
+<aside class="notice">
+HTTP is a protocol used for communication with web servers. Web pages are offered using the HTTP protocol (hence the `http://` in the beggining of web page addresses. You can learn more about it [here](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) .
+</aside>
+
+To make life easier, we have compiled pre written code snippets that connect to the backend actions. To access them, go back to the Endpoints tab in the project page, select the backend action that you want to connect to and click on the Code Snippet button. In the popup, select the platform and proggraming languge and copy the code snippet.
+
+![](http://i.giphy.com/26AHKFF6SkVucF9N6.gif)
+
+Notice that if you are using `#body.SOMETHING` in your action, the code snippet will have that `SOMETHING` in place already, so you'll just need to replace it's value.
+
+Here are some more in-depth guides on mobile integrations:
+
+- **iOS** - [iOS Swift integration tutorial](https://github.com/RapidSoftwareSolutions/ios-swift-integration-tutorial).
+
+
+#System Overview
+## Overview Page 
 The overview page will show you the following information:
 
 - Number of Backend Actions (Endpoints), Numbers (For sending SMS messages), And Databases you've used in your project.
@@ -41,12 +147,12 @@ The overview page will show you the following information:
 - Your Latest Activity.
 - Basic Statistics.
 
-# Endpoints Page
+## Endpoints Page
 The endpoints page is the core of your app. Through this page you can create the backend actions for your app, create static pages based on HTML, CSS and JS and upload files. 
 
 ![](http://i.giphy.com/l0LJdmkawpJ1lnzpK.gif)
 
-##Web Pages
+###Web Pages
 
 By clicking on Web Pages you will be able to create a static webpage that will be host on our servers. **The URL of the web page will be structured this way:**
 
@@ -55,34 +161,34 @@ By clicking on Web Pages you will be able to create a static webpage that will b
 For example:
 `http://expert-bluewhale-loli.imrapid.io/index`
 
-##Files
+###Files
 Using this tool you can upload any file you want to our servers and `GET` it later. 
 
-##Backend Actions
+###Backend Actions
 
 By clicking on 'Backend Actions' you will be able to create a backend action, for example: Sign_up backend action (Endpoint). 
 
 Give it a name that will describe it the best and go edit it. To create your endpoint use the 'Edit' button right after you're creating it, this will take you forward to the Endpoints (Backend Actions) Editor page =>
 
-#Endpoints Editor
+##Endpoints Editor
 ![](http://i.giphy.com/3oCWtzVbAwEzBnmF68.gif)
 
 The editor is the core of our platform, using this tool you will be able to create any logic tree based any API we support. 
 
 The editor is divided into the tools you need to create the endpoints:
 
-##Blocks
+###Blocks
 APIs divided into backend actions -> Blocks = Drag and Drop them to open them.
 
-##Code Snippet 
+###Code Snippet 
 An `HTTP Access` code generator for iOS, Android and WEB.
 
-##RUN Tool
+###RUN Tool
 The RUN tool, a.k.a the Action Panel is your tool to check the endpoint. It means that you will be able to find out 
 
 Sometimes, it's good to check your endpoint with [**Postman**](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) also.
 
-##Body Parameters
+###Body Parameters
 
 To use the #body parameters you should fill the 
 
