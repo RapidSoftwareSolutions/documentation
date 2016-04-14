@@ -1273,6 +1273,51 @@ For Example:
 - Status = 200 (Success).
 </aside>
 
+<h1 id="encrupt">Encrupt</h1>
+
+<h2 id="encrypt-hash">Encrypt.Hash</h2>
+
+<p><strong>Use Case:</strong> Save you users password in protocol md5.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>input</td>
+<td>This will be your input</td>
+<td>For example: Use the #body.password encrypt the password you&rsquo;re saving in your DB collection</td>
+</tr>
+<tr>
+<td>output</td>
+<td>object</td>
+<td>give it a name (for example: password) and use it in response to print the encrypted password</td>
+</tr>
+<tr>
+<td>algorithm</td>
+<td>type of algorithm to protect the #body</td>
+<td><a href="https://en.wikipedia.org/wiki/SHA-1">sha1</a>, <a href="https://en.wikipedia.org/wiki/SHA-2">sha2</a>, and the most common <a href="https://en.wikipedia.org/wiki/MD5">md5</a></td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> The encrypted content. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example:
+- Use response.sendMessage block, 
+- Message = #[object name]. In this case it will be #password
+- Status = 200 (Success).
+</aside>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
