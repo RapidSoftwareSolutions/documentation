@@ -23,6 +23,7 @@ Welcome to RapidAPI. RapidAPI let's you build the backend for your app easily - 
 
 
 ##How it's all started?
+<<<<<<< HEAD
 
 We were at a hackathon when we realized all the teams were spending hours building the same backend logic: installing DBs, writing user signup logic, updating packages and more. All these teams were spending hours and hours - basically doing the same thing. That's what we've built RapidAPI for. With RapidAPI, you get all the basic backend functions deliverd to you as blocks. All you have to do is drag and drop them and you get a fully functional backend - hosted in the cloud. **Rather than spending days on backend development - do it in minutes**.
 
@@ -87,6 +88,72 @@ You'll notice that the verify block has 2 outcomes:
 
 If it's not a valid email, we'll use the _response.sendMessage_ block to send back an error message saying `The email sent is not valid`, with a 400 code.
 
+=======
+
+We were at a hackathon when we realized all the teams were spending hours building the same backend logic: installing DBs, writing user signup logic, updating packages and more. All these teams were spending hours and hours - basically doing the same thing. That's what we've built RapidAPI for. With RapidAPI, you get all the basic backend functions deliverd to you as blocks. All you have to do is drag and drop them and you get a fully functional backend - hosted in the cloud. **Rather than spending days on backend development - do it in minutes**.
+
+##The Backend
+RapidAPI is an online platform that lets you create a back end for your web or mobile app without writing a single line of code. Every web or mobile app has two parts:
+
+- Front end: Runs on the user's device. In charge of showing the user interface (UI) and reacting to the users actions. For example: showing a button and then reacting to a click on it.
+- Back end: Runs on servers. In charge of storing data (e.g. user details, product lists, etc...) and performing actions (authenticating users, sending push notifications, etc...).
+
+When using RapidAPI, you construct the back end logic using blocks. Each block represents a basic action done in the back end. These are things like saving to a database, sending a notification or accessing an API. The back end is hosted on the RapidAPI servers and you can use it from your app.
+
+##How it works
+
+Your backend is built out of backend actions. Each action performs a certain task for your app. Examples of actions can be:
+
+- **Sign up**: register a user to your app.
+- **Sign in**: verify a user in your app.
+- **Send message**: send a message from one user to another in your app.
+- **Purchase product**: pay for a product and mark it as purchased in your app.
+
+Each one of these backend actions is built out of blocks. Each block performs a basic task within an action. Let's take a sign up action for example. We'll first want to make sure that the user sends a valid email address. For that, we'll use the _verify.email_ block. This block will get the email passed in the request to that action and check if it's valid. It'll have 2 outcomes - these are things that can happen - either the email is valid, or it's not. If it's not - we'll return an error message. If it is, we'll check the password using a similar _verify.passwordLength_ block. If that's valid, we'll save to the database - and so on... That way, we'll build the logic of the action. It'll end up looking like that:
+
+![](http://curious-warthog-bhhb.imrapid.io/basic_block_flow.jpg)
+
+#Getting started
+Let's create the basic sign up backend action the get the ropes of using the system.
+
+To begin, head over to [https://rapidapi.com](https://rapidapi.com) and sign up.
+
+##Creating your first project
+
+A project in RapidAPI is basically the backend of a single app. It contains all the backend actions for that app, as well as it's database. Let's start by creating a new project.
+
+![](http://i.giphy.com/3o6ozxLj7NXDnZzK4U.gif)
+
+##Creating a database collection
+
+Now that we have a project, create a database collection that will store all the users that sign up. Do so by heading over to the database tab and clicking _Create New Collection_. Name the collection _users_ and create it.
+
+You'll now notice you have a fully functional database collection. In our next step, we'll build a backend action that saves to it.
+
+![](http://i.giphy.com/l3V0pRF2XJ6nl0Hok.gif)
+
+##Creating the Sign Up backend action
+
+To create the sign up backend action head over to the _ENDPOINTS_ tab. Click the _Backend Action_ button and create the new backend action named _sign up_. Once it is created, open it by clicking _Edit_.
+
+![](http://i.giphy.com/3o6ozunG5Pw2Z7iwMw.gif)
+
+Within the editor, we'll first drag in the _verify.email_ block to verify that the email supplied by the user is correct. As the parameter to be checked, we'll use `#body.email`. This will be replaced with the value sent under 'email' in the call to that backend action.
+
+![](http://i.giphy.com/xT1XGJHxpYuuZ71iuI.gif)
+
+<aside class="notice">
+Your application can pass parameters to the backend action in the request body. Parameters are passed as key-value pairs. For example, you can pass a username in the request body under the key `username`. To access it, use `#body.username` just like we did with the email just before.
+</aside>
+
+You'll notice that the verify block has 2 outcomes:
+
+- **is**: The passed value is a valid email.
+- **not**: The passed value is not a valid email.
+
+If it's not a valid email, we'll use the _response.sendMessage_ block to send back an error message saying `The email sent is not valid`, with a 400 code.
+
+>>>>>>> gh-pages
 <aside class="notice">
 Every backend action must end with a response. This response should let the app know what happened (success, error, etc...). Sometimes we'll send data in the response (for example, a feed of posts or a string of messages).
 Every response has a status code signifying the status of the request (you may be familiar with 404 which means not found). You can see a drop down with popular response codes.
@@ -336,6 +403,7 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 **Missing:** Use the **response.SendMessage** block to get a missing message back. For example: The object is missing.
 
+
 ##Database.find
 **Name of the backend functions:** Find more than one object in your database.
 
@@ -358,6 +426,83 @@ Success — Use the **response.SendMessage** block to get a success message back
 </aside>
 
 **Missing:** Use the **response.SendMessage** block to get a missing message back. For example: The object is missing.
+
+##Database.update
+**Name of the backend functions:** Update an existing object in a collection. 
+
+**Use Case:** update user's email or password. 
+
+**Structure:** Use the query to find what you want to update and then use the update section to actually update it.  
+
+
+**Parameters information:**
+
+
+Parameter | Use | Example
+--------- | ------- | -----------
+Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
+Query Field | Where do you want to find the data? | you want to get an email - Use the string = email. 
+Query Operator | What will be the search type (action) that will go over your database. | ... 
+Query Value | What are you looking for? | the exact email: mickey@rapidapi.com
+
+
+<aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — For Example: Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it. In this case, it will be: #result.
+</aside>
+
+##Database.save
+
+![](http://i.giphy.com/3o6ozGZ0eUbk0onFte.gif)
+
+**Name of the backend functions:** Save an object in a collection
+
+**Use Case:** You want to save a new customer type that has registered to your online store. 
+
+**How To Use (DOC):**
+
+1. Click add to add a key.
+
+2. Name your key and choose the object type you want to use.
+
+2.a. Array is a collection of values. Use this to save a collection of users IDs.
+
+2.b. Object is a custom data schema that can contain arrays and strings and more objects. 
+
+3.c. String is traditionally a sequence of characters. Use it to define key and value for something you want to save in the database. 
+
+
+<aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — For Example: Use the **response.SendMessage** block to get a success message back.
+</aside>
+
+##Database.remove
+**Name of the backend functions:** Remove an object in a collection 
+
+**Use Case:** You want to remove a customer type from your collection. 
+  
+
+
+**Parameters information:**
+
+
+Parameter | Use | Example
+--------- | ------- | -----------
+Collection | This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).  | users  | 
+Query Field | Where do you want to find the data? | you want to get an email - Use the string = email. 
+Query Operator | What will be the search type (action) that will go over your database. | ... 
+Query Value | What are you looking for? | the exact email: mickey@rapidapi.com
+
+
+<aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — For Example: Use the **response.SendMessage** block to get a success message back. 
+</aside>
+
 
 
 #Send SMS
@@ -416,11 +561,191 @@ To | Use an email address or use #body parameter [(How to?)](##body-parameters) 
 - Status = 200 (Success).
 </aside>
 
+
+
+#Files
+##File.save 
+
+**Name of the backend functions:** Save file on the server
+
+**Use Case:** User want to add a profile picture. 
+
+**How to use:** Add an upload function in your code and connect the endpoint to it.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+File | #body.image | use #body parameter [(How to?)](#body-parameters) to upload file| 
+Folder | #body.images | The folder that will contain all the files. 
+Key | profilepic | the name of the file you want to upload.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+##File.files.saveWithRandomKey
+
+**Name of the backend functions:** Save file on the server and giving it a different name.
+
+**Use Case:** You want to add gallery to your website. 
+
+**How to use:** Add an upload function in your code to connect our endpoint to it.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+File | #body.image | use #body parameter [(How to?)](#body-parameters) to upload file| 
+Folder | #body.images | The folder that will contain all the files. 
+to | object | where do you want to save the file? Give it a name.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+##files.getDownloadURL
+
+**Name of the backend functions:** Get a url of an uploaded file.
+
+**Use Case:** Can be used with an uploader to get the link to the file you’ve uploaded. 
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+folder | #body.image | from what folder do you want to get the file URL from? | 
+key | #body.images | What’s the name of the file?
+to | object | where do you want to save the file? Give it a name.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+##files.read
+
+**Name of the backend functions:** Read a file. 
+
+**Use Case:** Allows you to read the file and to show it. Let’s say you want to show an image on the screen. 
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+folder | #body.image | from what folder do you want to get the file URL from? | 
+key | #body.images | What’s the name of the file?
+to | object | where do you want to save the file? Give it a name.
+
+**Returns Examples:** Success or Error. 
+
+**How to test?** Use the 'RUN' tool [(How to?)](#run-tool)
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+#Google Places
+##Places.getNearbyPlaces
+
+**Name of the backend functions:** Get places near by; based on longitude, latitude and radius.
+
+**How to use:** Go to [LatLong Generator](http://www.latlong.net/convert-address-to-lat-long.html) and get the latitued and longtitude of the point place you want to track.
+
+**Use Case:** You want to show a user which places are near his location.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+latitude | For example: 32.075001| Use generater or Google Maps to get lat | 
+longitude | For example: 34.783453 | Use generater or Google Maps to get long
+radius | Use numbers | In meters. For example: 50 meters.
+to | object | where do you want to save the file? Give it a name. For example: places
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Use the object you have used in the 'to' field to print the result. In this case we used #places
+- Status = 200 (Success).
+</aside>
+
+#Stripe (Payment)
+##Stripe.charge 
+
+**The Endpoint Must Be in a `GET` method:** To add a stripe charge function => endpoint, go to the endpoint page and create new endpoint, while creating, click on 'advanced settings' and change the endpoint type to a `GET` type.
+
+**Name of the backend functions:** Charge trough Stripe.
+
+**Use Case:** Sell items trough your website, charge using stripe.
+
+**Parameters information:** 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+amount | For example: 32.075001| Use generater or Google Maps to get lat | 
+currency | For example: 34.783453 | Use generater or Google Maps to get long
+description | Use numbers | In meters. For example: 50 meters.
+secretId | object | where do you want to save the file? Give it a name. For example: places
+source | object | where do you want to save the file? Give it a name. For example: places
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Use the object you have used in the 'to' field to print the result. In this case we used #places
+- Status = 200 (Success).
+</aside>
+
 #Facebook
 ##Facebook.Login 
 **Drag and drop this block from the Facebook Package.**
 
-**The Endpoint Must Be in a `GET` method.**
+**The Endpoint Must Be in a `GET` method:** To add a facebook login endpoint, go to the endpoint page and create new endpoint, while creating, click on 'advanced settings' and change the endpoint type to a `GET` type.
 
 **Use Case:** Add a facebook login plugin to your app.
 
