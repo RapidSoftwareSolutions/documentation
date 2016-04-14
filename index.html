@@ -1273,7 +1273,7 @@ For Example:
 - Status = 200 (Success).
 </aside>
 
-<h1 id="encrupt">Encrupt</h1>
+<h1 id="encrypt">Encrypt</h1>
 
 <h2 id="encrypt-hash">Encrypt.Hash</h2>
 
@@ -1315,6 +1315,177 @@ For Example:
 For Example:
 - Use response.sendMessage block, 
 - Message = #[object name]. In this case it will be #password
+- Status = 200 (Success).
+</aside>
+
+<h1 id="mailchimp">Mailchimp</h1>
+
+<h2 id="mailchimp-addlist">mailChimp.addList</h2>
+
+<p><strong>Use Case:</strong> Add a new Mailchimp email list. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>companyName</td>
+<td>The name of the company sending the email</td>
+<td>will be displayed in the footer of the mail</td>
+</tr>
+<tr>
+<td>defaultEmail</td>
+<td>email</td>
+<td>The default email that this list will use for emails</td>
+</tr>
+<tr>
+<td>defaultSubject</td>
+<td>content</td>
+<td>The default subject that this list will use for emails</td>
+</tr>
+<tr>
+<td>name</td>
+<td>content</td>
+<td>name the list</td>
+</tr>
+<tr>
+<td>reminder</td>
+<td>text</td>
+<td>let people who are getting the mail understand how did they got into this list</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> True or False. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example:
+- Use response.sendMessage block, 
+- Message = List Created.
+- Status = 200 (Success).
+</aside>
+
+<h2 id="mailchimp-editlist">mailChimp.editList</h2>
+
+<p><strong>Use Case:</strong> Update an already exist list on Mailchimp. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>companyName</td>
+<td>The name of the company sending the email</td>
+<td>will be displayed in the footer of the mail</td>
+</tr>
+<tr>
+<td>defaultEmail</td>
+<td>email</td>
+<td>The default email that this list will use for emails</td>
+</tr>
+<tr>
+<td>defaultSubject</td>
+<td>content</td>
+<td>The default subject that this list will use for emails</td>
+</tr>
+<tr>
+<td>id</td>
+<td>The ID of the list on Mailchimp</td>
+<td>go to Mailchimp and get the ID of the list you want to update.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>content</td>
+<td>name the list</td>
+</tr>
+<tr>
+<td>reminder</td>
+<td>text</td>
+<td>let people who are getting the mail understand how did they got into this list</td>
+</tr>
+<tr>
+<td>To</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> True or False. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example:
+- Use response.sendMessage block, 
+- Message = List Updated.
+- Status = 200 (Success).
+</aside>
+
+<h2 id="mailchimp-addmembertolist">mailChimp.addMemberToList</h2>
+
+<p><strong>Use Case:</strong> Add user to a created list. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>for example: mickey@rapidapi.com</td>
+<td>The email that will be added to the list</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>Mickey</td>
+<td>The first name that will be added to the list</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>Haslavsky</td>
+<td>The last name that will be added to the list</td>
+</tr>
+<tr>
+<td>listid</td>
+<td>The ID of the list on Mailchimp</td>
+<td>go to Mailchimp and get the ID of the list you want to update.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> True or False. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example:
+- Use response.sendMessage block, 
+- Message = User has been added.
 - Status = 200 (Success).
 </aside>
 
