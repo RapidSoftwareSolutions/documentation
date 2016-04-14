@@ -126,6 +126,8 @@
 
 <h2 id="how-it-39-s-all-started">How it&rsquo;s all started?</h2>
 
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+
 <p>We were at a hackathon when we realized all the teams were spending hours building the same backend logic: installing DBs, writing user signup logic, updating packages and more. All these teams were spending hours and hours - basically doing the same thing. That&rsquo;s what we&rsquo;ve built RapidAPI for. With RapidAPI, you get all the basic backend functions deliverd to you as blocks. All you have to do is drag and drop them and you get a fully functional backend - hosted in the cloud. <strong>Rather than spending days on backend development - do it in minutes</strong>.</p>
 
 <h2 id="the-backend">The Backend</h2>
@@ -197,10 +199,98 @@ Your application can pass parameters to the backend action in the request body. 
 
 <p>If it&rsquo;s not a valid email, we&rsquo;ll use the <em>response.sendMessage</em> block to send back an error message saying <code class="prettyprint">The email sent is not valid</code>, with a 400 code.</p>
 
+<p>=======</p>
+
+<p>We were at a hackathon when we realized all the teams were spending hours building the same backend logic: installing DBs, writing user signup logic, updating packages and more. All these teams were spending hours and hours - basically doing the same thing. That&rsquo;s what we&rsquo;ve built RapidAPI for. With RapidAPI, you get all the basic backend functions deliverd to you as blocks. All you have to do is drag and drop them and you get a fully functional backend - hosted in the cloud. <strong>Rather than spending days on backend development - do it in minutes</strong>.</p>
+
+<h2 id="the-backend">The Backend</h2>
+
+<p>RapidAPI is an online platform that lets you create a back end for your web or mobile app without writing a single line of code. Every web or mobile app has two parts:</p>
+
+<ul>
+<li>Front end: Runs on the user&rsquo;s device. In charge of showing the user interface (UI) and reacting to the users actions. For example: showing a button and then reacting to a click on it.</li>
+<li>Back end: Runs on servers. In charge of storing data (e.g. user details, product lists, etc&hellip;) and performing actions (authenticating users, sending push notifications, etc&hellip;).</li>
+</ul>
+
+<p>When using RapidAPI, you construct the back end logic using blocks. Each block represents a basic action done in the back end. These are things like saving to a database, sending a notification or accessing an API. The back end is hosted on the RapidAPI servers and you can use it from your app.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>Your backend is built out of backend actions. Each action performs a certain task for your app. Examples of actions can be:</p>
+
+<ul>
+<li><strong>Sign up</strong>: register a user to your app.</li>
+<li><strong>Sign in</strong>: verify a user in your app.</li>
+<li><strong>Send message</strong>: send a message from one user to another in your app.</li>
+<li><strong>Purchase product</strong>: pay for a product and mark it as purchased in your app.</li>
+</ul>
+
+<p>Each one of these backend actions is built out of blocks. Each block performs a basic task within an action. Let&rsquo;s take a sign up action for example. We&rsquo;ll first want to make sure that the user sends a valid email address. For that, we&rsquo;ll use the <em>verify.email</em> block. This block will get the email passed in the request to that action and check if it&rsquo;s valid. It&rsquo;ll have 2 outcomes - these are things that can happen - either the email is valid, or it&rsquo;s not. If it&rsquo;s not - we&rsquo;ll return an error message. If it is, we&rsquo;ll check the password using a similar <em>verify.passwordLength</em> block. If that&rsquo;s valid, we&rsquo;ll save to the database - and so on&hellip; That way, we&rsquo;ll build the logic of the action. It&rsquo;ll end up looking like that:</p>
+
+<p><img src="http://curious-warthog-bhhb.imrapid.io/basic_block_flow.jpg" /></p>
+
+<h1 id="getting-started">Getting started</h1>
+
+<p>Let&rsquo;s create the basic sign up backend action the get the ropes of using the system.</p>
+
+<p>To begin, head over to <a href="https://rapidapi.com">https://rapidapi.com</a> and sign up.</p>
+
+<h2 id="creating-your-first-project">Creating your first project</h2>
+
+<p>A project in RapidAPI is basically the backend of a single app. It contains all the backend actions for that app, as well as it&rsquo;s database. Let&rsquo;s start by creating a new project.</p>
+
+<p><img src="http://i.giphy.com/3o6ozxLj7NXDnZzK4U.gif" /></p>
+
+<h2 id="creating-a-database-collection">Creating a database collection</h2>
+
+<p>Now that we have a project, create a database collection that will store all the users that sign up. Do so by heading over to the database tab and clicking <em>Create New Collection</em>. Name the collection <em>users</em> and create it.</p>
+
+<p>You&rsquo;ll now notice you have a fully functional database collection. In our next step, we&rsquo;ll build a backend action that saves to it.</p>
+
+<p><img src="http://i.giphy.com/l3V0pRF2XJ6nl0Hok.gif" /></p>
+
+<h2 id="creating-the-sign-up-backend-action">Creating the Sign Up backend action</h2>
+
+<p>To create the sign up backend action head over to the <em>ENDPOINTS</em> tab. Click the <em>Backend Action</em> button and create the new backend action named <em>sign up</em>. Once it is created, open it by clicking <em>Edit</em>.</p>
+
+<p><img src="http://i.giphy.com/3o6ozunG5Pw2Z7iwMw.gif" /></p>
+
+<p>Within the editor, we&rsquo;ll first drag in the <em>verify.email</em> block to verify that the email supplied by the user is correct. As the parameter to be checked, we&rsquo;ll use <code class="prettyprint">#body.email</code>. This will be replaced with the value sent under &#39;email&rsquo; in the call to that backend action.</p>
+
+<p><img src="http://i.giphy.com/xT1XGJHxpYuuZ71iuI.gif" /></p>
+
+<aside class="notice">
+Your application can pass parameters to the backend action in the request body. Parameters are passed as key-value pairs. For example, you can pass a username in the request body under the key `username`. To access it, use `#body.username` just like we did with the email just before.
+</aside>
+
+<p>You&rsquo;ll notice that the verify block has 2 outcomes:</p>
+
+<ul>
+<li><strong>is</strong>: The passed value is a valid email.</li>
+<li><strong>not</strong>: The passed value is not a valid email.</li>
+</ul>
+
+<p>If it&rsquo;s not a valid email, we&rsquo;ll use the <em>response.sendMessage</em> block to send back an error message saying <code class="prettyprint">The email sent is not valid</code>, with a 400 code.</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>gh-pages
 <aside class="notice">
 Every backend action must end with a response. This response should let the app know what happened (success, error, etc&hellip;). Sometimes we&rsquo;ll send data in the response (for example, a feed of posts or a string of messages).
 Every response has a status code signifying the status of the request (you may be familiar with 404 which means not found). You can see a drop down with popular response codes.
-</aside>
+</aside></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 
 <p><img src="http://i.giphy.com/3o6ozjsuyiwOzLYrL2.gif" /></p>
 
@@ -520,8 +610,9 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <h1 id="database">Database</h1>
 
-<p>The database is soo sooooo important!; Right now the database section is placed right after the Endpoints page in the platform. Go there to understand how does it works. 
-<img src="http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif" /></p>
+<p>Here you will get an explanation about the backend functions connected to </p>
+
+<p><img src="http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif" /></p>
 
 <h2 id="database-find-one">Database Find.one</h2>
 
@@ -1094,28 +1185,28 @@ For Example:
 </thead><tbody>
 <tr>
 <td>amount</td>
-<td>The amout of $ you want to charge</td>
-<td>use numbers</td>
+<td>For example: 32.075001</td>
+<td>Use generater or Google Maps to get lat</td>
 </tr>
 <tr>
 <td>currency</td>
-<td>Use the currency you want to charge</td>
-<td>for example USD</td>
+<td>For example: 34.783453</td>
+<td>Use generater or Google Maps to get long</td>
 </tr>
 <tr>
 <td>description</td>
-<td>Description that will be sent to users</td>
-<td>What is he paying for? Will be presented to the user</td>
+<td>Use numbers</td>
+<td>In meters. For example: 50 meters.</td>
 </tr>
 <tr>
 <td>secretId</td>
-<td>your secret ID</td>
-<td>Go the <a href="https://dashboard.stripe.com/login">Stripe developers framework</a> to get your secret ID</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
 </tr>
 <tr>
 <td>source</td>
-<td>where the payment coming from</td>
-<td>use the account you will place the charging on</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
 </tr>
 </tbody></table>
 
