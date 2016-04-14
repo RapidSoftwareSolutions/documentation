@@ -117,7 +117,6 @@
         </ul>
     </div>
     <div class="page-wrapper">
-      <div class="dark-box"></div>
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
@@ -624,6 +623,121 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <p><strong>Missing:</strong> Use the <strong>response.SendMessage</strong> block to get a missing message back. For example: The object is missing.</p>
 
+<h2 id="database-update">Database.update</h2>
+
+<p><strong>Name of the backend functions:</strong> Update an existing object in a collection. </p>
+
+<p><strong>Use Case:</strong> update user&rsquo;s email or password. </p>
+
+<p><strong>Structure:</strong> Use the query to find what you want to update and then use the update section to actually update it.  </p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Collection</td>
+<td>This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).</td>
+<td>users</td>
+</tr>
+<tr>
+<td>Query Field</td>
+<td>Where do you want to find the data?</td>
+<td>you want to get an email - Use the string = email.</td>
+</tr>
+<tr>
+<td>Query Operator</td>
+<td>What will be the search type (action) that will go over your database.</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>Query Value</td>
+<td>What are you looking for?</td>
+<td>the exact email: mickey@rapidapi.com</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — For Example: Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it. In this case, it will be: #result.
+</aside>
+
+<h2 id="database-save">Database.save</h2>
+
+<p><img src="http://i.giphy.com/3o6ozGZ0eUbk0onFte.gif" /></p>
+
+<p><strong>Name of the backend functions:</strong> Save an object in a collection</p>
+
+<p><strong>Use Case:</strong> You want to save a new customer type that has registered to your online store. </p>
+
+<p><strong>How To Use (DOC):</strong></p>
+
+<ol>
+<li><p>Click add to add a key.</p></li>
+<li><p>Name your key and choose the object type you want to use.</p></li>
+</ol>
+
+<p>2.a. Array is a collection of values. Use this to save a collection of users IDs.</p>
+
+<p>2.b. Object is a custom data schema that can contain arrays and strings and more objects. </p>
+
+<p>3.c. String is traditionally a sequence of characters. Use it to define key and value for something you want to save in the database. </p>
+
+<aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — For Example: Use the **response.SendMessage** block to get a success message back.
+</aside>
+
+<h2 id="database-remove">Database.remove</h2>
+
+<p><strong>Name of the backend functions:</strong> Remove an object in a collection </p>
+
+<p><strong>Use Case:</strong> You want to remove a customer type from your collection. </p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Collection</td>
+<td>This is the collection you’ve created on the database section. If you didn’t created any… just give it a name and a collection will be created (Yes! MongoDB).</td>
+<td>users</td>
+</tr>
+<tr>
+<td>Query Field</td>
+<td>Where do you want to find the data?</td>
+<td>you want to get an email - Use the string = email.</td>
+</tr>
+<tr>
+<td>Query Operator</td>
+<td>What will be the search type (action) that will go over your database.</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>Query Value</td>
+<td>What are you looking for?</td>
+<td>the exact email: mickey@rapidapi.com</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — For Example: Use the **response.SendMessage** block to get a success message back. 
+</aside>
+
 <h1 id="send-sms">Send SMS</h1>
 
 <h2 id="delivery-sendsms">delivery.sendSMS</h2>
@@ -715,13 +829,314 @@ Success — Use the **response.SendMessage** block to get a success message back
 - Status = 200 (Success).
 </aside>
 
+<h1 id="files">Files</h1>
+
+<h2 id="file-save">File.save</h2>
+
+<p><strong>Name of the backend functions:</strong> Save file on the server</p>
+
+<p><strong>Use Case:</strong> User want to add a profile picture. </p>
+
+<p><strong>How to use:</strong> Add an upload function in your code and connect the endpoint to it.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>File</td>
+<td>#body.image</td>
+<td>use #body parameter <a href="#body-parameters">(How to?)</a> to upload file</td>
+</tr>
+<tr>
+<td>Folder</td>
+<td>#body.images</td>
+<td>The folder that will contain all the files.</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>profilepic</td>
+<td>the name of the file you want to upload.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Success or Error. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+<h2 id="file-files-savewithrandomkey">File.files.saveWithRandomKey</h2>
+
+<p><strong>Name of the backend functions:</strong> Save file on the server and giving it a different name.</p>
+
+<p><strong>Use Case:</strong> You want to add gallery to your website. </p>
+
+<p><strong>How to use:</strong> Add an upload function in your code to connect our endpoint to it.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>File</td>
+<td>#body.image</td>
+<td>use #body parameter <a href="#body-parameters">(How to?)</a> to upload file</td>
+</tr>
+<tr>
+<td>Folder</td>
+<td>#body.images</td>
+<td>The folder that will contain all the files.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Success or Error. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+<h2 id="files-getdownloadurl">files.getDownloadURL</h2>
+
+<p><strong>Name of the backend functions:</strong> Get a url of an uploaded file.</p>
+
+<p><strong>Use Case:</strong> Can be used with an uploader to get the link to the file you’ve uploaded. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>folder</td>
+<td>#body.image</td>
+<td>from what folder do you want to get the file URL from?</td>
+</tr>
+<tr>
+<td>key</td>
+<td>#body.images</td>
+<td>What’s the name of the file?</td>
+</tr>
+<tr>
+<td>to</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Success or Error. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+<h2 id="files-read">files.read</h2>
+
+<p><strong>Name of the backend functions:</strong> Read a file. </p>
+
+<p><strong>Use Case:</strong> Allows you to read the file and to show it. Let’s say you want to show an image on the screen. </p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>folder</td>
+<td>#body.image</td>
+<td>from what folder do you want to get the file URL from?</td>
+</tr>
+<tr>
+<td>key</td>
+<td>#body.images</td>
+<td>What’s the name of the file?</td>
+</tr>
+<tr>
+<td>to</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> Success or Error. </p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Success
+- Status = 200 (Success).
+</aside>
+
+<h1 id="google-places">Google Places</h1>
+
+<h2 id="places-getnearbyplaces">Places.getNearbyPlaces</h2>
+
+<p><strong>Name of the backend functions:</strong> Get places near by; based on longitude, latitude and radius.</p>
+
+<p><strong>How to use:</strong> Go to <a href="http://www.latlong.net/convert-address-to-lat-long.html">LatLong Generator</a> and get the latitued and longtitude of the point place you want to track.</p>
+
+<p><strong>Use Case:</strong> You want to show a user which places are near his location.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>latitude</td>
+<td>For example: 32.075001</td>
+<td>Use generater or Google Maps to get lat</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>For example: 34.783453</td>
+<td>Use generater or Google Maps to get long</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>Use numbers</td>
+<td>In meters. For example: 50 meters.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Use the object you have used in the 'to&rsquo; field to print the result. In this case we used #places
+- Status = 200 (Success).
+</aside>
+
+<h1 id="stripe-payment">Stripe (Payment)</h1>
+
+<h2 id="stripe-charge">Stripe.charge</h2>
+
+<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method:</strong> To add a stripe charge function =&gt; endpoint, go to the endpoint page and create new endpoint, while creating, click on &#39;advanced settings&rsquo; and change the endpoint type to a <code class="prettyprint">GET</code> type.</p>
+
+<p><strong>Name of the backend functions:</strong> Charge trough Stripe.</p>
+
+<p><strong>Use Case:</strong> Sell items trough your website, charge using stripe.</p>
+
+<p><strong>Parameters information:</strong> </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount</td>
+<td>For example: 32.075001</td>
+<td>Use generater or Google Maps to get lat</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>For example: 34.783453</td>
+<td>Use generater or Google Maps to get long</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Use numbers</td>
+<td>In meters. For example: 50 meters.</td>
+</tr>
+<tr>
+<td>secretId</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
+</tr>
+<tr>
+<td>source</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example: 
+- Use response.sendMessage block, 
+- Message = Use the object you have used in the 'to&rsquo; field to print the result. In this case we used #places
+- Status = 200 (Success).
+</aside>
+
 <h1 id="facebook">Facebook</h1>
 
 <h2 id="facebook-login">Facebook.Login</h2>
 
 <p><strong>Drag and drop this block from the Facebook Package.</strong></p>
 
-<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method.</strong></p>
+<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method:</strong> To add a facebook login endpoint, go to the endpoint page and create new endpoint, while creating, click on &#39;advanced settings&rsquo; and change the endpoint type to a <code class="prettyprint">GET</code> type.</p>
 
 <p><strong>Use Case:</strong> Add a facebook login plugin to your app.</p>
 
@@ -916,13 +1331,6 @@ Success — Use the **response.SendMessage** block to get a success message back
 </tr>
 </tbody></table>
 
-      </div>
-      <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="Web">Web</a>
-                <a href="#" data-language-name="iOS">iOS</a>
-                <a href="#" data-language-name="Android">Android</a>
-          </div>
       </div>
     </div>
   </body>
