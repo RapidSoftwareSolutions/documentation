@@ -154,7 +154,7 @@
 
 <p><img src="http://curious-warthog-bhhb.imrapid.io/basic_block_flow.jpg" /></p>
 
-<h1 id="getting-started">Getting started</h1>
+          <h1 id="getting-started">Getting started</h1>
 
 <p>Let&rsquo;s create the basic sign up backend action the get the ropes of using the system.</p>
 
@@ -249,7 +249,7 @@ HTTP is a protocol used for communication with web servers. Web pages are offere
 <li><strong>iOS</strong> - <a href="https://github.com/RapidSoftwareSolutions/ios-swift-integration-tutorial">iOS Swift integration tutorial</a>.</li>
 </ul>
 
-<h1 id="system-overview">System Overview</h1>
+          <h1 id="system-overview">System Overview</h1>
 
 <h2 id="overview-page">Overview Page</h2>
 
@@ -258,14 +258,14 @@ HTTP is a protocol used for communication with web servers. Web pages are offere
 <ul>
 <li>Number of Backend Actions (Endpoints), Numbers (For sending SMS messages), And Databases you&rsquo;ve used in your project.</li>
 <li>Basic Tutorials.</li>
-<li>Collaborators - Here you can share your project with other teammates. </li>
+<li>Collaborators - Here you can share your project with other teammates.</li>
 <li>Your Latest Activity.</li>
 <li>Basic Statistics.</li>
 </ul>
 
 <h2 id="endpoints-page">Endpoints Page</h2>
 
-<p>The endpoints page is the core of your app. Through this page you can create the backend actions for your app, create static pages based on HTML, CSS and JS and upload files. </p>
+<p>The endpoints page is the core of your app. Through this page you can create the backend actions for your app, create static pages based on HTML, CSS and JS and upload files.</p>
 
 <p><img src="http://i.giphy.com/l0LJdmkawpJ1lnzpK.gif" /></p>
 
@@ -280,11 +280,11 @@ HTTP is a protocol used for communication with web servers. Web pages are offere
 
 <h3 id="files">Files</h3>
 
-<p>Using this tool you can upload any file you want to our servers and <code class="prettyprint">GET</code> it later. </p>
+<p>Using this tool you can upload any file you want to our servers and <code class="prettyprint">GET</code> it later.</p>
 
 <h3 id="backend-actions">Backend Actions</h3>
 
-<p>By clicking on &#39;Backend Actions&rsquo; you will be able to create a backend action, for example: Sign_up backend action (Endpoint). </p>
+<p>By clicking on &lsquo;Backend Actions&rsquo; you will be able to create a backend action, for example: Sign_up backend action (Endpoint).</p>
 
 <p>Give it a name that will describe it the best and go edit it. To create your endpoint use the &#39;Edit&rsquo; button right after you&rsquo;re creating it, this will take you forward to the Endpoints (Backend Actions) Editor page =&gt;</p>
 
@@ -292,7 +292,7 @@ HTTP is a protocol used for communication with web servers. Web pages are offere
 
 <p><img src="http://i.giphy.com/3oCWtzVbAwEzBnmF68.gif" /></p>
 
-<p>The editor is the core of our platform, using this tool you will be able to create any logic tree based any API we support. </p>
+<p>The editor is the core of our platform, using this tool you will be able to create any logic tree based any API we support.</p>
 
 <p>The editor is divided into the tools you need to create the endpoints:</p>
 
@@ -306,63 +306,25 @@ HTTP is a protocol used for communication with web servers. Web pages are offere
 
 <h3 id="run-tool">RUN Tool</h3>
 
-<p>The RUN tool, a.k.a the Action Panel is your tool to check the endpoint. It means that you will be able to find out </p>
+<p>The RUN tool, a.k.a the Action Panel is your tool to check the endpoint. It means that you will be able to find out</p>
 
 <p>Sometimes, it&rsquo;s good to check your endpoint with <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en"><strong>Postman</strong></a> also.</p>
 
 <h3 id="body-parameters">Body Parameters</h3>
 
-<p>To use the #body parameters you should fill the </p>
+<p>To use the #body parameters you should fill the</p>
 
-<h1 id="calculate">Calculate</h1>
+          <h1 id="facebook">Facebook</h1>
 
-<p><img src="http://i.giphy.com/26haHhYc5OPa8XKpi.gif" /></p>
+<h2 id="facebook-login">Facebook.Login</h2>
 
-<h2 id="calculate-add">Calculate.add</h2>
+<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
 
-<p><strong>Use Case:</strong> You are using leaderboard in your game and you want to add the number of user’s points after the game has ended.</p>
+<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method:</strong> To add a facebook login endpoint, go to the endpoint page and create new endpoint, while creating, click on &lsquo;advanced settings&rsquo; and change the endpoint type to a <code class="prettyprint">GET</code> type.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Use Case:</strong> Add a facebook login plugin to your app.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Num1</td>
-<td>Number of #body parameter</td>
-<td>Will be the first number to be part of the function</td>
-</tr>
-<tr>
-<td>Num2</td>
-<td>Number of #body parameter</td>
-<td>Will be the second number to be part of the function</td>
-</tr>
-<tr>
-<td>Sum</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> You will get the addition result. Something like 3+1=4? </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#">(How to?)</a></p>
-
-<aside class="warning">Error - Use the response.SendMessage block to get an error message back.</aside>
-
-<aside class="success">
-Success — Use the response.SendMessage block to get a success message back. In the message field, use the #[Name of the object] to get it.
-</aside>
-
-<h2 id="calculate-substract">Calculate.substract</h2>
-
-<p><strong>Use Case:</strong> Substract two numbers and get a resault.</p>
-
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -372,77 +334,42 @@ Success — Use the response.SendMessage block to get a success message back. In
 </tr>
 </thead><tbody>
 <tr>
-<td>Num1</td>
-<td>Number of #body parameter</td>
-<td>Will be the first number to be part of the function</td>
+<td>Client ID</td>
+<td>Your App ID on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
+<td>What is your app ID?</td>
 </tr>
 <tr>
-<td>Num2</td>
-<td>Number of #body parameter</td>
-<td>Will be the second number to be part of the function</td>
+<td>Client Secret</td>
+<td>Your App Secret on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
+<td>What is your app ID?</td>
 </tr>
 <tr>
-<td>difference</td>
+<td>To</td>
 <td>Object</td>
 <td>Give your object a name, so you can print it later with the result.</td>
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> You will get the substraction result. Something like 3-1=2? </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#">(How to?)</a></p>
-
-<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
-</aside>
-
-<h2 id="calculate-multiply">Calculate.multiply</h2>
-
-<p><strong>Use Case:</strong> Multiply two numbers and get a resault.</p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Num1</td>
-<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
-<td>Will be the first number to be part of the function</td>
-</tr>
-<tr>
-<td>Num2</td>
-<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
-<td>Will be the second number to be part of the function</td>
-</tr>
-<tr>
-<td>Product</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> You will get the substraction result. Something like 3-1=2? </p>
+<p><strong>Returns Examples:</strong> Login url.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+
+- Use response.sendMessage block,
+- Message = #[object name].
+- Status = 200 (Success).
 </aside>
 
-<h2 id="calculate-random">Calculate.random</h2>
+<h2 id="facebook-getuserdetails">facebook.getUserDetails</h2>
 
-<p><strong>Use Case:</strong> Print a random number between min and max limit.</p>
+<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Use Case:</strong> Get details of a user that has signed up using your facebook app.</p>
+
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -452,37 +379,44 @@ Success — Use the **response.SendMessage** block to get a success message back
 </tr>
 </thead><tbody>
 <tr>
-<td>Max</td>
-<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
-<td>Will be the minimum number presented</td>
+<td>userToken</td>
+<td><a href="https://developers.facebook.com/tools/accesstoken/">Facebook Access Token Tool </a></td>
+<td>What&rsquo;s the user&rsquo;s token?</td>
 </tr>
 <tr>
-<td>Min</td>
-<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
-<td>Will be the maximum number presented</td>
+<td>App Secret</td>
+<td>Your App Secret on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
+<td>What is your app ID?</td>
 </tr>
 <tr>
-<td>to</td>
+<td>To</td>
 <td>Object</td>
 <td>Give your object a name, so you can print it later with the result.</td>
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> You will get a random number between the minimum and the maximum number.</p>
+<p><strong>Returns Examples:</strong> Login url.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<p>And use the <a href="https://developers.facebook.com/tools/accesstoken/">AccessToken</a> Tool on Facebook.</p>
 
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+
+- Use response.sendMessage block,
+- Message = #[object name].
+- Status = 200 (Success).
 </aside>
 
-<h2 id="calculate-divide">Calculate.divide</h2>
+<h2 id="facebook-postonwall">facebook.postonWall</h2>
 
-<p><strong>Use Case:</strong> Divide two numbers and get a resault.</p>
+<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Use Case:</strong> Post on user&rsquo;s wall.</p>
+
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -492,36 +426,42 @@ Success — Use the **response.SendMessage** block to get a success message back
 </tr>
 </thead><tbody>
 <tr>
-<td>Num1</td>
-<td>Number of #body parameter <a href="#body-parameters">(How to?)</a></td>
-<td>Will be the first number to be part of the function</td>
+<td>Message</td>
+<td>Plain Text or #Body Parameter <a href="##body-parameters">(How to?)</a></td>
+<td>What is the message that will be published on user&rsquo;s wall</td>
 </tr>
 <tr>
-<td>Num2</td>
-<td>Number of #body parameter <a href="#body-parameters">(How to?)</a></td>
-<td>Will be the second number to be part of the function</td>
+<td>userToken</td>
+<td><a href="https://developers.facebook.com/tools/accesstoken/">Facebook Access Token Tool </a></td>
+<td>What&rsquo;s the user&rsquo;s token?</td>
 </tr>
 <tr>
-<td>to</td>
+<td>To</td>
 <td>Object</td>
 <td>Give your object a name, so you can print it later with the result.</td>
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> A result of two divided numbers. 3/3 = 1. </p>
+<p><strong>Returns Examples:</strong> Login url.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<p>And use the <a href="https://developers.facebook.com/tools/accesstoken/">AccessToken</a> Tool on Facebook.</p>
 
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+
+- Use response.sendMessage block,
+- Message = #[object name].
+- Status = 200 (Success).
 </aside>
 
-<h1 id="database">Database</h1>
+          <h1 id="database">Database</h1>
 
-<p>The database is soo sooooo important!; Right now the database section is placed right after the Endpoints page in the platform. Go there to understand how does it works. 
-<img src="http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif" /></p>
+<p>Here you will get an explanation about the backend functions connected to</p>
+
+<p><img src="http://i.giphy.com/l3Ts3QZR8xVCdKi5y.gif" /></p>
 
 <h2 id="database-find-one">Database Find.one</h2>
 
@@ -625,11 +565,11 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <h2 id="database-update">Database.update</h2>
 
-<p><strong>Name of the backend functions:</strong> Update an existing object in a collection. </p>
+<p><strong>Name of the backend functions:</strong> Update an existing object in a collection.</p>
 
-<p><strong>Use Case:</strong> update user&rsquo;s email or password. </p>
+<p><strong>Use Case:</strong> update user&rsquo;s email or password.</p>
 
-<p><strong>Structure:</strong> Use the query to find what you want to update and then use the update section to actually update it.  </p>
+<p><strong>Structure:</strong> Use the query to find what you want to update and then use the update section to actually update it.</p>
 
 <p><strong>Parameters information:</strong></p>
 
@@ -674,7 +614,7 @@ Success — For Example: Use the **response.SendMessage** block to get a success
 
 <p><strong>Name of the backend functions:</strong> Save an object in a collection</p>
 
-<p><strong>Use Case:</strong> You want to save a new customer type that has registered to your online store. </p>
+<p><strong>Use Case:</strong> You want to save a new customer type that has registered to your online store.</p>
 
 <p><strong>How To Use (DOC):</strong></p>
 
@@ -685,9 +625,9 @@ Success — For Example: Use the **response.SendMessage** block to get a success
 
 <p>2.a. Array is a collection of values. Use this to save a collection of users IDs.</p>
 
-<p>2.b. Object is a custom data schema that can contain arrays and strings and more objects. </p>
+<p>2.b. Object is a custom data schema that can contain arrays and strings and more objects.</p>
 
-<p>3.c. String is traditionally a sequence of characters. Use it to define key and value for something you want to save in the database. </p>
+<p>3.c. String is traditionally a sequence of characters. Use it to define key and value for something you want to save in the database.</p>
 
 <aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
 
@@ -697,9 +637,9 @@ Success — For Example: Use the **response.SendMessage** block to get a success
 
 <h2 id="database-remove">Database.remove</h2>
 
-<p><strong>Name of the backend functions:</strong> Remove an object in a collection </p>
+<p><strong>Name of the backend functions:</strong> Remove an object in a collection</p>
 
-<p><strong>Use Case:</strong> You want to remove a customer type from your collection. </p>
+<p><strong>Use Case:</strong> You want to remove a customer type from your collection.</p>
 
 <p><strong>Parameters information:</strong></p>
 
@@ -735,18 +675,18 @@ Success — For Example: Use the **response.SendMessage** block to get a success
 <aside class="warning">Error - For Example: Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-Success — For Example: Use the **response.SendMessage** block to get a success message back. 
+Success — For Example: Use the **response.SendMessage** block to get a success message back.
 </aside>
 
-<h1 id="send-sms">Send SMS</h1>
+          <h1 id="send-sms">Send SMS</h1>
 
 <h2 id="delivery-sendsms">delivery.sendSMS</h2>
 
 <p><strong>Drag and drop this block from the delivery package.</strong></p>
 
-<p><strong>Use Case:</strong> Send an SMS to a new registered user. </p>
+<p><strong>Use Case:</strong> Send an SMS to a new registered user.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -767,9 +707,9 @@ Success — For Example: Use the **response.SendMessage** block to get a success
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Success or Error. </p>
+<p><strong>Returns Examples:</strong> Success or Error.</p>
 
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+<p><strong>How to test?</strong> Use the &lsquo;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
@@ -783,9 +723,9 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <p><strong>Drag and drop this block from the delivery package.</strong></p>
 
-<p><strong>Use Case:</strong> Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him. </p>
+<p><strong>Use Case:</strong> Can be part of every scheme. For example: User has signed up and a welcome email has been sent to him.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -816,7 +756,7 @@ Success — Use the **response.SendMessage** block to get a success message back
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Success or Error. </p>
+<p><strong>Returns Examples:</strong> Success or Error.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
@@ -824,22 +764,22 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <aside class="success">
 
-- Use response.sendMessage block, 
+- Use response.sendMessage block,
 - Message = Success
 - Status = 200 (Success).
 </aside>
 
-<h1 id="files">Files</h1>
+          <h1 id="files">Files</h1>
 
 <h2 id="file-save">File.save</h2>
 
 <p><strong>Name of the backend functions:</strong> Save file on the server</p>
 
-<p><strong>Use Case:</strong> User want to add a profile picture. </p>
+<p><strong>Use Case:</strong> User want to add a profile picture.</p>
 
 <p><strong>How to use:</strong> Add an upload function in your code and connect the endpoint to it.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -865,15 +805,15 @@ Success — Use the **response.SendMessage** block to get a success message back
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Success or Error. </p>
+<p><strong>Returns Examples:</strong> Success or Error.</p>
 
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+<p><strong>How to test?</strong> Use the &lsquo;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
 <aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
 
-- Use response.sendMessage block, 
+- Use response.sendMessage block,
 - Message = Success
 - Status = 200 (Success).
 </aside>
@@ -882,11 +822,11 @@ Success — Use the **response.SendMessage** block to get a success message back
 
 <p><strong>Name of the backend functions:</strong> Save file on the server and giving it a different name.</p>
 
-<p><strong>Use Case:</strong> You want to add gallery to your website. </p>
+<p><strong>Use Case:</strong> You want to add gallery to your website.</p>
 
 <p><strong>How to use:</strong> Add an upload function in your code to connect our endpoint to it.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -912,7 +852,7 @@ Success — Use the **response.SendMessage** block to get a success message back
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Success or Error. </p>
+<p><strong>Returns Examples:</strong> Success or Error.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
@@ -921,8 +861,8 @@ For Example:
 Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-For Example: 
-- Use response.sendMessage block, 
+For Example:
+- Use response.sendMessage block,
 - Message = Success
 - Status = 200 (Success).
 </aside>
@@ -931,9 +871,9 @@ For Example:
 
 <p><strong>Name of the backend functions:</strong> Get a url of an uploaded file.</p>
 
-<p><strong>Use Case:</strong> Can be used with an uploader to get the link to the file you’ve uploaded. </p>
+<p><strong>Use Case:</strong> Can be used with an uploader to get the link to the file you’ve uploaded.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -959,7 +899,7 @@ For Example:
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Success or Error. </p>
+<p><strong>Returns Examples:</strong> Success or Error.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
@@ -968,19 +908,19 @@ For Example:
 Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-For Example: 
-- Use response.sendMessage block, 
+For Example:
+- Use response.sendMessage block,
 - Message = Success
 - Status = 200 (Success).
 </aside>
 
 <h2 id="files-read">files.read</h2>
 
-<p><strong>Name of the backend functions:</strong> Read a file. </p>
+<p><strong>Name of the backend functions:</strong> Read a file.</p>
 
-<p><strong>Use Case:</strong> Allows you to read the file and to show it. Let’s say you want to show an image on the screen. </p>
+<p><strong>Use Case:</strong> Allows you to read the file and to show it. Let’s say you want to show an image on the screen.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -1006,7 +946,7 @@ For Example:
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Success or Error. </p>
+<p><strong>Returns Examples:</strong> Success or Error.</p>
 
 <p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
 
@@ -1015,13 +955,274 @@ For Example:
 Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-For Example: 
-- Use response.sendMessage block, 
+For Example:
+- Use response.sendMessage block,
 - Message = Success
 - Status = 200 (Success).
 </aside>
 
-<h1 id="google-places">Google Places</h1>
+          <h1 id="stripe-payment">Stripe (Payment)</h1>
+
+<h2 id="stripe-charge">Stripe.charge</h2>
+
+<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method:</strong> To add a stripe charge function =&gt; endpoint, go to the endpoint page and create new endpoint, while creating, click on &lsquo;advanced settings&rsquo; and change the endpoint type to a <code class="prettyprint">GET</code> type.</p>
+
+<p><strong>Name of the backend functions:</strong> Charge trough Stripe.</p>
+
+<p><strong>Use Case:</strong> Sell items trough your website, charge using stripe.</p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount</td>
+<td>For example: 32.075001</td>
+<td>Use generater or Google Maps to get lat</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>For example: 34.783453</td>
+<td>Use generater or Google Maps to get long</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Use numbers</td>
+<td>In meters. For example: 50 meters.</td>
+</tr>
+<tr>
+<td>secretId</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
+</tr>
+<tr>
+<td>source</td>
+<td>object</td>
+<td>where do you want to save the file? Give it a name. For example: places</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+For Example:
+Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+For Example:
+- Use response.sendMessage block,
+- Message = Use the object you have used in the 'to&rsquo; field to print the result. In this case we used #places
+- Status = 200 (Success).
+</aside>
+
+          <h1 id="calculate">Calculate</h1>
+
+<p><img src="http://i.giphy.com/26haHhYc5OPa8XKpi.gif" /></p>
+
+<h2 id="calculate-add">Calculate.add</h2>
+
+<p><strong>Use Case:</strong> You are using leaderboard in your game and you want to add the number of user’s points after the game has ended.</p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Num1</td>
+<td>Number of #body parameter</td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter</td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get the addition result. Something like 3+1=4?</p>
+
+<p><strong>How to test?</strong> Use the &lsquo;RUN&rsquo; tool <a href="#">(How to?)</a></p>
+
+<aside class="warning">Error - Use the response.SendMessage block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the response.SendMessage block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-substract">Calculate.substract</h2>
+
+<p><strong>Use Case:</strong> Substract two numbers and get a resault.</p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Num1</td>
+<td>Number of #body parameter</td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter</td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>difference</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get the substraction result. Something like 3-1=2?</p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-multiply">Calculate.multiply</h2>
+
+<p><strong>Use Case:</strong> Multiply two numbers and get a resault.</p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Num1</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get the substraction result. Something like 3-1=2?</p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-random">Calculate.random</h2>
+
+<p><strong>Use Case:</strong> Print a random number between min and max limit.</p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Max</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the minimum number presented</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>Number of #body parameter <a href="##body-parameters">(How to?)</a></td>
+<td>Will be the maximum number presented</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> You will get a random number between the minimum and the maximum number.</p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+<h2 id="calculate-divide">Calculate.divide</h2>
+
+<p><strong>Use Case:</strong> Divide two numbers and get a resault.</p>
+
+<p><strong>Parameters information:</strong></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Num1</td>
+<td>Number of #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>Will be the first number to be part of the function</td>
+</tr>
+<tr>
+<td>Num2</td>
+<td>Number of #body parameter <a href="#body-parameters">(How to?)</a></td>
+<td>Will be the second number to be part of the function</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Object</td>
+<td>Give your object a name, so you can print it later with the result.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Returns Examples:</strong> A result of two divided numbers. 3/3 = 1.</p>
+
+<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+
+<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+
+<aside class="success">
+Success — Use the **response.SendMessage** block to get a success message back. In the message field, use the #[Name of the object] to get it.
+</aside>
+
+          <h1 id="google-places">Google Places</h1>
 
 <h2 id="places-getnearbyplaces">Places.getNearbyPlaces</h2>
 
@@ -1031,7 +1232,7 @@ For Example:
 
 <p><strong>Use Case:</strong> You want to show a user which places are near his location.</p>
 
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Parameters information:</strong></p>
 
 <table><thead>
 <tr>
@@ -1067,80 +1268,43 @@ For Example:
 Error - Use the **response.SendMessage** block to get an error message back.</aside>
 
 <aside class="success">
-For Example: 
-- Use response.sendMessage block, 
-- Message = Use the object you have used in the 'to&rsquo; field to print the result. In this case we used #places
+For Example:
+- Use response.sendMessage block,
+- Message = Use the object you have used in the &lsquo;to&rsquo; field to print the result. In this case we used #places
 - Status = 200 (Success).
 </aside>
 
-<h1 id="stripe-payment">Stripe (Payment)</h1>
+          <h1 id="ebay-api">eBay API</h1>
 
-<h2 id="stripe-charge">Stripe.charge</h2>
+<p>You can connect to the eBay API using the RapidAPI system. This let&rsquo;s you do things like querying products and prices, placing bids and more&hellip;</p>
 
-<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method:</strong> To add a stripe charge function =&gt; endpoint, go to the endpoint page and create new endpoint, while creating, click on &#39;advanced settings&rsquo; and change the endpoint type to a <code class="prettyprint">GET</code> type.</p>
-
-<p><strong>Name of the backend functions:</strong> Charge trough Stripe.</p>
-
-<p><strong>Use Case:</strong> Sell items trough your website, charge using stripe.</p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>amount</td>
-<td>The amout of $ you want to charge</td>
-<td>use numbers</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>Use the currency you want to charge</td>
-<td>for example USD</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Description that will be sent to users</td>
-<td>What is he paying for? Will be presented to the user</td>
-</tr>
-<tr>
-<td>secretId</td>
-<td>your secret ID</td>
-<td>Go the <a href="https://dashboard.stripe.com/login">Stripe developers framework</a> to get your secret ID</td>
-</tr>
-<tr>
-<td>source</td>
-<td>where the payment coming from</td>
-<td>use the account you will place the charging on</td>
-</tr>
-</tbody></table>
+<p>To use the eBay API you need to first obtain an API key. You may obtain that key set from the eBay developer portal. to start, <a href="https://developer.ebay.com/signin">sign up</a> for a developer account. Once in the account you&rsquo;ll be immidiatly prompted to create a new app. Give your app a name and choose production. You may be required to enter additional personal details.</p>
 
 <aside class="warning">
-For Example:
-Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-For Example: 
-- Use response.sendMessage block, 
-- Message = Use the object you have used in the 'to&rsquo; field to print the result. In this case we used #places
-- Status = 200 (Success).
+You must use production keys (and not sandbox) in order to make API requests to the eBay API.
 </aside>
 
-<h1 id="facebook">Facebook</h1>
+<p><img src="http://i.giphy.com/d3FxGZTIcGOMWuFG.gif" /></p>
 
-<h2 id="facebook-login">Facebook.Login</h2>
+<p>Once you are finished your app will be created and you&rsquo;ll see 3 different keys:</p>
 
-<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
+<ul>
+<li>App ID - the main key we&rsquo;ll use</li>
+<li>Dev ID</li>
+<li>Cert ID</li>
+</ul>
 
-<p><strong>The Endpoint Must Be in a <code class="prettyprint">GET</code> method:</strong> To add a facebook login endpoint, go to the endpoint page and create new endpoint, while creating, click on &#39;advanced settings&rsquo; and change the endpoint type to a <code class="prettyprint">GET</code> type.</p>
+<p>Take note of these as you&rsquo;ll need to put them in the eBay API blocks to connect to the eBay API.</p>
 
-<p><strong>Use Case:</strong> Add a facebook login plugin to your app.</p>
+<aside class="notice">
+The eBay API allows you to make 5,000 API calls / month. After that you&rsquo;ll be required to verify your app with eBay.
+</aside>
 
-<p><strong>Parameters information:</strong> </p>
+<h2 id="ebay-finditemsbykeyword">ebay.findItemsByKeyword</h2>
+
+<p>This block let&rsquo;s you query the entire eBay product base and find products based on search keywords.</p>
+
+<p><strong>Use Case:</strong> if you want to suggest products your users may need - you can present some options from eBay. For example, a camping app may present tents as users will probably need those.</p>
 
 <table><thead>
 <tr>
@@ -1150,42 +1314,157 @@ For Example:
 </tr>
 </thead><tbody>
 <tr>
-<td>Client ID</td>
-<td>Your App ID on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
-<td>What is your app ID?</td>
+<td>FreeShippingOnly</td>
+<td><code class="prettyprint">true</code> or <code class="prettyprint">false</code></td>
+<td>If true, the block will only look for products with free shipping.</td>
 </tr>
 <tr>
-<td>Client Secret</td>
-<td>Your App Secret on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
-<td>What is your app ID?</td>
+<td>MaxPrice</td>
+<td>Number / empty</td>
+<td>Will limit the price of the found products (in USD). Leave empty for unlimited price.</td>
 </tr>
 <tr>
-<td>To</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
+<td>appId</td>
+<td>App ID</td>
+<td>Your App ID generated in the eBay Developer Portal (see the beggining of the section for reference)</td>
+</tr>
+<tr>
+<td>data</td>
+<td><code class="prettyprint">to</code></td>
+<td>The object the returned items will be saved to. You can use <code class="prettyprint">#to</code> to get the found items.</td>
+</tr>
+<tr>
+<td>domainName</td>
+<td>Digital_cameras</td>
+<td>Catalog Name</td>
+</tr>
+<tr>
+<td>error</td>
+<td>&lsquo;e&rsquo;</td>
+<td>If there is an error, the error message will ve saved there (so you can use <code class="prettyprint">#e</code> to see the message)</td>
+</tr>
+<tr>
+<td>keyword</td>
+<td><code class="prettyprint">iPhone 6</code>, <code class="prettyprint">Harry potter box set</code></td>
+<td>The keywords you are searching for</td>
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Login url. </p>
+<p>If there is success, use <code class="prettyprint">#t</code> to use the returned items. It&rsquo;ll hold an array with all the found items. Each item will look like:</p>
+<pre class="highlight json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"itemId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"272146040512"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Apple iPhone 6s - 64GB - Factory GSM Unlocked 12.0MP Smartphone - All Colors"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"globalId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EBAY-US"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"subtitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free Shipping. 1 Year Apple Warranty. Apple UK Charger."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"primaryCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9355"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"categoryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cell Phones &amp; Smartphones"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"galleryURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://thumbs1.ebaystatic.com/pict/272146040512404000000001_2.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"viewItemURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.ebay.com/itm/New-Apple-iPhone-6s-64GB-Factory-GSM-Unlocked-12-0MP-Smartphone-All-Colors-/272146040512?var=570957295960"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PayPal"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"autoPay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11205"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brooklyn,NY,USA"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"shippingInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"shippingServiceCost"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+</span><span class="nt">"currencyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"shippingType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FlatDomesticCalculatedInternational"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"shipToLocations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"GB"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"AU"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"AT"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"BE"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"FR"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"DE"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"IT"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"JP"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"ES"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"TW"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"NL"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"CN"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"MX"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"DK"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"RO"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"SK"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"BG"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"CZ"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"FI"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"HU"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"LV"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"LT"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"MT"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"EE"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"GR"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"CY"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"SI"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"SE"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"KR"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"ID"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"ZA"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"TH"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"IE"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"PL"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"RU"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"IL"</span><span class="w">
+</span><span class="p">],</span><span class="w">
+</span><span class="nt">"expeditedShipping"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"oneDayShippingAvailable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"handlingTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"sellingStatus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"currentPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">699.99</span><span class="p">,</span><span class="w">
+</span><span class="nt">"currencyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"convertedCurrentPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">699.99</span><span class="p">,</span><span class="w">
+</span><span class="nt">"currencyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"sellingState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"timeLeft"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P10DT17H53M11S"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"listingInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"bestOfferEnabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"buyItNowAvailable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-25T19:04:55.000Z"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-25T19:09:55.000Z"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"listingType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"StoreInventory"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"gift"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"returnsAccepted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"condition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"conditionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"conditionDisplayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"isMultiVariationListing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"discountPriceInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"originalRetailPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">999.99</span><span class="p">,</span><span class="w">
+</span><span class="nt">"currencyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"pricingTreatment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STP"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"soldOnEbay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"soldOffEbay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"topRatedListing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
 
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
+</span></code></pre>
 
-<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
+<h2 id="ebay-getsingleitem">ebay.getSingleItem</h2>
 
-<aside class="success">
+<p>This block gets information about a single item in the eBay catalog.</p>
 
-- Use response.sendMessage block, 
-- Message = #[object name].
-- Status = 200 (Success).
-</aside>
-
-<h2 id="facebook-getuserdetails">facebook.getUserDetails</h2>
-
-<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
-
-<p><strong>Use Case:</strong> Get details of a user that has signed up using your facebook app.</p>
-
-<p><strong>Parameters information:</strong> </p>
+<p><strong>Use case:</strong> A user saves a list of favorite items and you want to get their up-to-date details.</p>
 
 <table><thead>
 <tr>
@@ -1195,299 +1474,74 @@ For Example:
 </tr>
 </thead><tbody>
 <tr>
-<td>userToken</td>
-<td><a href="https://developers.facebook.com/tools/accesstoken/">Facebook Access Token Tool </a></td>
-<td>What&rsquo;s the user&rsquo;s token?</td>
+<td>appId</td>
+<td>App ID</td>
+<td>Your App ID generated in the eBay Developer Portal (see the beggining of the section for reference)</td>
 </tr>
 <tr>
-<td>App Secret</td>
-<td>Your App Secret on <a href="https://developers.facebook.com/">Facebook Developers</a></td>
-<td>What is your app ID?</td>
+<td>itemId</td>
+<td><code class="prettyprint">272146040512</code></td>
+<td>The unique ID of that item. Recieved when performing a query. Also, when looking at an item in the ebay site, it&rsquo;s the number at the end of the URL. (For example, for <a href="http://www.ebay.com/itm/RC-6-Axis-Quadcopter-Flying-Drone-Toy-Gyro-HD-Camera-Remote-Control-LED-Lights-/381503849423">this</a>, it&rsquo;ll be <code class="prettyprint">381503849423</code>).</td>
 </tr>
 <tr>
-<td>To</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
+<td>to</td>
+<td><code class="prettyprint">to</code></td>
+<td>The object the returned items will be saved to. You can use <code class="prettyprint">#to</code> to get the found items.</td>
 </tr>
 </tbody></table>
 
-<p><strong>Returns Examples:</strong> Login url. </p>
+<p>The data returned by the block will be formatted like that:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+</span><span class="nt">"$"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"xmlns"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:ebay:apis:eBLBaseComponents"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"Timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-15T01:13:29.397Z"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Ack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"E963_CORE_APILW_17911290_R1"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"963"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"ItemID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"381503849423"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"EndTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-26T07:49:23.000Z"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"ViewItemURLForNaturalSearch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.ebay.com/itm/RC-6-Axis-Quadcopter-Flying-Drone-Toy-Gyro-HD-Camera-Remote-Control-LED-Lights-/381503849423"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"ListingType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FixedPriceItem"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rancho Cucamonga, California"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"GalleryURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://thumbs4.ebaystatic.com/pict/3815038494238080_1.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"PictureURL"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="s2">"http://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KbAAAOSwCQNWgOmK/$_1.JPG?set_id=880000500F"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1IIAAOSwLpdW8rVs/$_1.JPG?set_id=880000500F"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3iUAAOSw9uFW8rVs/$_1.JPG?set_id=880000500F"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kZEAAOSwZ8ZW8rVs/$_1.JPG?set_id=880000500F"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oFgAAOSwBnVW8rVt/$_1.JPG?set_id=880000500F"</span><span class="w">
+</span><span class="p">],</span><span class="w">
+</span><span class="nt">"PrimaryCategoryID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34053"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"PrimaryCategoryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toys &amp; Hobbies:Radio Control &amp; Control Line:Radio Control Vehicles:Airplanes &amp; Helicopters"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"BidCount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"ConvertedCurrentPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">49.95</span><span class="p">,</span><span class="w">
+</span><span class="nt">"currencyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"ListingStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"TimeLeft"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P11DT6H35M54S"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RC 6-Axis Quadcopter Flying Drone Toy Gyro HD Camera Remote Control LED Lights"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"AutoPay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"ConditionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"ConditionDisplayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"QuantityAvailableHint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Limited"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"DiscountPriceInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"OriginalRetailPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">119.95</span><span class="p">,</span><span class="w">
+</span><span class="nt">"currencyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"PricingTreatment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STP"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"SoldOneBay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"SoldOffeBay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"GlobalShipping"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a> </p>
-
-<p>And use the <a href="https://developers.facebook.com/tools/accesstoken/">AccessToken</a> Tool on Facebook.</p>
-
-<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-
-- Use response.sendMessage block, 
-- Message = #[object name].
-- Status = 200 (Success).
-</aside>
-
-<h2 id="facebook-postonwall">facebook.postonWall</h2>
-
-<p><strong>Drag and drop this block from the Facebook Package.</strong></p>
-
-<p><strong>Use Case:</strong> Post on user&rsquo;s wall.</p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Message</td>
-<td>Plain Text or #Body Parameter <a href="##body-parameters">(How to?)</a></td>
-<td>What is the message that will be published on user&rsquo;s wall</td>
-</tr>
-<tr>
-<td>userToken</td>
-<td><a href="https://developers.facebook.com/tools/accesstoken/">Facebook Access Token Tool </a></td>
-<td>What&rsquo;s the user&rsquo;s token?</td>
-</tr>
-<tr>
-<td>To</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> Login url. </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a> </p>
-
-<p>And use the <a href="https://developers.facebook.com/tools/accesstoken/">AccessToken</a> Tool on Facebook.</p>
-
-<aside class="warning">Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-
-- Use response.sendMessage block, 
-- Message = #[object name].
-- Status = 200 (Success).
-</aside>
-
-<h1 id="encrypt">Encrypt</h1>
-
-<h2 id="encrypt-hash">Encrypt.Hash</h2>
-
-<p><strong>Use Case:</strong> Save you users password in protocol md5.</p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>input</td>
-<td>This will be your input</td>
-<td>For example: Use the #body.password encrypt the password you&rsquo;re saving in your DB collection</td>
-</tr>
-<tr>
-<td>output</td>
-<td>object</td>
-<td>give it a name (for example: password) and use it in response to print the encrypted password</td>
-</tr>
-<tr>
-<td>algorithm</td>
-<td>type of algorithm to protect the #body</td>
-<td><a href="https://en.wikipedia.org/wiki/SHA-1">sha1</a>, <a href="https://en.wikipedia.org/wiki/SHA-2">sha2</a>, and the most common <a href="https://en.wikipedia.org/wiki/MD5">md5</a></td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> The encrypted content. </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
-
-<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-For Example:
-- Use response.sendMessage block, 
-- Message = #[object name]. In this case it will be #password
-- Status = 200 (Success).
-</aside>
-
-<h1 id="mailchimp">Mailchimp</h1>
-
-<h2 id="mailchimp-addlist">mailChimp.addList</h2>
-
-<p><strong>Use Case:</strong> Add a new Mailchimp email list. </p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>companyName</td>
-<td>The name of the company sending the email</td>
-<td>will be displayed in the footer of the mail</td>
-</tr>
-<tr>
-<td>defaultEmail</td>
-<td>email</td>
-<td>The default email that this list will use for emails</td>
-</tr>
-<tr>
-<td>defaultSubject</td>
-<td>content</td>
-<td>The default subject that this list will use for emails</td>
-</tr>
-<tr>
-<td>name</td>
-<td>content</td>
-<td>name the list</td>
-</tr>
-<tr>
-<td>reminder</td>
-<td>text</td>
-<td>let people who are getting the mail understand how did they got into this list</td>
-</tr>
-<tr>
-<td>To</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> True or False. </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
-
-<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-For Example:
-- Use response.sendMessage block, 
-- Message = List Created.
-- Status = 200 (Success).
-</aside>
-
-<h2 id="mailchimp-editlist">mailChimp.editList</h2>
-
-<p><strong>Use Case:</strong> Update an already exist list on Mailchimp. </p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>companyName</td>
-<td>The name of the company sending the email</td>
-<td>will be displayed in the footer of the mail</td>
-</tr>
-<tr>
-<td>defaultEmail</td>
-<td>email</td>
-<td>The default email that this list will use for emails</td>
-</tr>
-<tr>
-<td>defaultSubject</td>
-<td>content</td>
-<td>The default subject that this list will use for emails</td>
-</tr>
-<tr>
-<td>id</td>
-<td>The ID of the list on Mailchimp</td>
-<td>go to Mailchimp and get the ID of the list you want to update.</td>
-</tr>
-<tr>
-<td>name</td>
-<td>content</td>
-<td>name the list</td>
-</tr>
-<tr>
-<td>reminder</td>
-<td>text</td>
-<td>let people who are getting the mail understand how did they got into this list</td>
-</tr>
-<tr>
-<td>To</td>
-<td>Object</td>
-<td>Give your object a name, so you can print it later with the result.</td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> True or False. </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
-
-<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-For Example:
-- Use response.sendMessage block, 
-- Message = List Updated.
-- Status = 200 (Success).
-</aside>
-
-<h2 id="mailchimp-addmembertolist">mailChimp.addMemberToList</h2>
-
-<p><strong>Use Case:</strong> Add user to a created list. </p>
-
-<p><strong>Parameters information:</strong> </p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Use</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>email</td>
-<td>for example: mickey@rapidapi.com</td>
-<td>The email that will be added to the list</td>
-</tr>
-<tr>
-<td>firstname</td>
-<td>Mickey</td>
-<td>The first name that will be added to the list</td>
-</tr>
-<tr>
-<td>lastname</td>
-<td>Haslavsky</td>
-<td>The last name that will be added to the list</td>
-</tr>
-<tr>
-<td>listid</td>
-<td>The ID of the list on Mailchimp</td>
-<td>go to Mailchimp and get the ID of the list you want to update.</td>
-</tr>
-</tbody></table>
-
-<p><strong>Returns Examples:</strong> True or False. </p>
-
-<p><strong>How to test?</strong> Use the &#39;RUN&rsquo; tool <a href="#run-tool">(How to?)</a></p>
-
-<aside class="warning">For Example: Error - Use the **response.SendMessage** block to get an error message back.</aside>
-
-<aside class="success">
-For Example:
-- Use response.sendMessage block, 
-- Message = User has been added.
-- Status = 200 (Success).
-</aside>
+</span></code></pre>
 
           <h1 id="errors">Errors</h1>
 
