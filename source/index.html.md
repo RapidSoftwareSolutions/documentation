@@ -19,6 +19,7 @@ includes:
   - p-stripe
   - p-calculate
   - p-googleplaces
+  - p-ebay
   - errors
 
 search: true
