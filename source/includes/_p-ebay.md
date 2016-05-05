@@ -216,3 +216,28 @@ The data returned by the block will be formatted like that:
 }
 
 ```
+
+##eBay.getCatalogProductsByFilters
+
+Instructions: All the fields do not have to be edited. The labels that are already included are hard coded by default values, but you can change it if needed.
+
+**Use case:** Show a list of catalog products based on a keyword, description or color. (For example: Show all iPhone 6 on ebay).
+
+Parameter | Use | Description
+--------- | ------- | -----------
+limit | Use a 'number' to limit the number of results you're getting back from ebay | for example: "4".
+searchQuery | Comma separated list of filter names , name value pairs with values separated from the name by :. The values themselves may just be a single value, a set of values enclosed in { , } or a range of values (inclusive) enclosed in[, ], with the start and end of the range separated by ... | For example: 
+to | `to` | The object the returned items will be saved to. You can use `#to` to get the found items.
+
+##eBay.getCatalogProductsByUPI
+
+Instructions: All the fields do not have to be edited. The labels that are already included are hard coded by default values, but you can change it if needed.
+
+**Use case:** Simillar to the Product By Filters it's giving back result with UPI which is a QR code explaining the item 
+
+Parameter | Use | Description
+--------- | ------- | -----------
+limit | Use a 'number' to limit the number of results you're getting back from ebay | for example: "4".
+searchQuery | Comma separated list of filter names , name value pairs with values separated from the name by :. The values themselves may just be a single value, a set of values enclosed in { , } or a range of values (inclusive) enclosed in[, ], with the start and end of the range separated by ... | For example: 
+to | `to` | The object the returned items will be saved to. You can use `#to` to get the found items.
+
