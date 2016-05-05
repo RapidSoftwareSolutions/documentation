@@ -1543,6 +1543,66 @@ The eBay API allows you to make 5,000 API calls / month. After that you&rsquo;ll
 
 </span></code></pre>
 
+<h2 id="ebay-getcatalogproductsbyfilters">eBay.getCatalogProductsByFilters</h2>
+
+<p>Instructions: All the fields do not have to be edited. The labels that are already included are hard coded by default values, but you can change it if needed.</p>
+
+<p><strong>Use case:</strong> Show a list of catalog products based on a keyword, description or color. (For example: Show all iPhone 6 on ebay).</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>Use a &#39;number&rsquo; to limit the number of results you&rsquo;re getting back from ebay</td>
+<td>for example: &ldquo;4&rdquo;.</td>
+</tr>
+<tr>
+<td>searchQuery</td>
+<td>Comma separated list of filter names , name value pairs with values separated from the name by :. The values themselves may just be a single value, a set of values enclosed in { , } or a range of values (inclusive) enclosed in[, ], with the start and end of the range separated by &hellip;</td>
+<td>For example:</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code class="prettyprint">to</code></td>
+<td>The object the returned items will be saved to. You can use <code class="prettyprint">#to</code> to get the found items.</td>
+</tr>
+</tbody></table>
+
+<h2 id="ebay-getcatalogproductsbyupi">eBay.getCatalogProductsByUPI</h2>
+
+<p>Instructions: All the fields do not have to be edited. The labels that are already included are hard coded by default values, but you can change it if needed.</p>
+
+<p><strong>Use case:</strong> Simillar to the Product By Filters it&rsquo;s giving back result with UPI which is a QR code explaining the item </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>Use a &#39;number&rsquo; to limit the number of results you&rsquo;re getting back from ebay</td>
+<td>for example: &ldquo;4&rdquo;.</td>
+</tr>
+<tr>
+<td>searchQuery</td>
+<td>Comma separated list of filter names , name value pairs with values separated from the name by :. The values themselves may just be a single value, a set of values enclosed in { , } or a range of values (inclusive) enclosed in[, ], with the start and end of the range separated by &hellip;</td>
+<td>For example:</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code class="prettyprint">to</code></td>
+<td>The object the returned items will be saved to. You can use <code class="prettyprint">#to</code> to get the found items.</td>
+</tr>
+</tbody></table>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
